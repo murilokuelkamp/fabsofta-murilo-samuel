@@ -1,9 +1,20 @@
 # Fábrica de Software 2025/1
 
-Murilo Henrique de Oliveira Kuelkamp
-Samuel Leal dos Santos
+## Nome da Equipe
+- Murilo Henrique de Oliveira Kuelkamp
+- Samuel Leal dos Santos
 
 ## Propostas de Projeto
+
+- Nome do sistema: sistema de Pet Shop
+    - Funcionalidade 1: estoque
+    - Funcionalidade 2: agendamento serviços
+    - Funcionalidade 3: cadastro de clientes
+    - Funcionalidade 4: históricos dos cliente
+    - Funcionalidade 5: pagamento
+    - Funcionalidade 6: perfil dos clientes
+    - Funcionalidade 7: produtos
+<s>
 
 - Nome do sistema: sistema de Freelancer
     - Funcionalidade 1 Tela de login/cadastro
@@ -15,15 +26,6 @@ Samuel Leal dos Santos
     - Funcionalidade 7 Tela de chat entre o freelancer e o contratante
     - Funcionalidade 8 Tela de histórico de traalhos(projetos anteriores)
     - Funcionalidade 9 Tela de avaliações e feedbacks
-
-- Nome do sistema: sistema de locação de ferramentas
-    - Funcionalidade 1 Tela de login/cadastro
-    - Funcionalidade 2 Tela inicial/home
-    - Funcionalidade 3 Tela detalhando a ferramenta
-    - Funcionalidade 4 Tela de carrinho de "compras"
-    - Funcionalidade 5 Tela de pagamento
-    - Funcionalidade 6 Tela do histórico de locação
-    - Funcionalidade 7 Tela de perfil do usuário
 
 - Nome do sistema: sistema de locação de carros
     - Funcionalidade 1 Tela de login/cadastro
@@ -45,6 +47,14 @@ Samuel Leal dos Santos
     - Funcionalidade 8 Tela de confirmação de pedido
     - Funcionalidade 9 Tela de histórico de pedidos
     - Funcionalidade 10 Tela de feedbacks
+</s>
+
+## Livro Eng Software Moderna
+[Eng. Soft Moderna - Requisitos](https://engsoftmoderna.info/cap3.html)
+
+## Histórias de Usuário
+-
+- 
 
     ### Revisão de Java
 
