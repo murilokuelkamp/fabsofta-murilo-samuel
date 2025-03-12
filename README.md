@@ -62,3 +62,15 @@
         - Máquina vitual do Java - interpreta o Bytecode(.class) do Java para a linguagem de máquina
     - JDK - Java Development Kit (javac.exe)
         - Compilar o código Java em bytecode(.class)
+
+
+###Criação de projeto no VSCode com Maven
+
+
+teclar F1
+digitar Java e escolher a opção create new java project
+project type: MAVEN
+Archetype: No Archetype
+pacote digitar domínio ao contrário ex: br.univille
+nome do projeto em minúsculo
+usar a pasta sugerida pelo vscode
