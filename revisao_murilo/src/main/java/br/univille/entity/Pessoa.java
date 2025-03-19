@@ -1,5 +1,7 @@
 package br.univille.entity;
 
+import java.util.ArrayList;
+
 public class Pessoa {
     //variável; atributo; propriedade
     private long id;
@@ -7,8 +9,15 @@ public class Pessoa {
     private String endereco;
 
     private Cidade cidade;
-    
-    
+
+    private ArrayList<Pokemon> listaPokemon = new ArrayList<Pokemon>();
+
+    public ArrayList<Pokemon> getListaPokemon() {
+        return listaPokemon;
+    }
+    public void setListaPokemon(ArrayList<Pokemon> listaPokemon){
+        this.listaPokemon = listaPokemon;
+    }
     public long getId() {
         return id;
     }
@@ -34,11 +43,9 @@ public class Pessoa {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
     //Sobreescrita de metodo (overrite)
     public String toString(){
         return getNome();
