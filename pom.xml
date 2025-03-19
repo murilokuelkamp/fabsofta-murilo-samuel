@@ -10,6 +10,7 @@
     <name>Multi Project: FSO 2025 1 A</name>
 
     <modules>
+        <module>revisao_murilo</module>
         <module>revisao_samuel</module>
     </modules>
 
