@@ -10,10 +10,11 @@
     - Funcionalidade 1: estoque
     - Funcionalidade 2: agendamento serviços
     - Funcionalidade 3: cadastro de clientes
-    - Funcionalidade 4: históricos dos cliente
-    - Funcionalidade 5: pagamento
-    - Funcionalidade 6: perfil dos clientes
-    - Funcionalidade 7: produtos
+    - Funcionalidade 4: históricos dos cliente (para o atendente)
+    - Funcionalidade 5: histórico de pedidos (para o cliente ver os pedidos que comprou)
+    - Funcionalidade 6: pagamento
+    - Funcionalidade 7: perfil dos clientes
+    - Funcionalidade 8: produtos
 <s>
 
 - Nome do sistema: sistema de Freelancer
@@ -53,8 +54,14 @@
 [Eng. Soft Moderna - Requisitos](https://engsoftmoderna.info/cap3.html)
 
 ## Histórias de Usuário
--
-- 
+- 1- “Como funcionário do pet shop, quero visualizar o estoque de produtos em tempo real, para evitar a falta de itens essenciais.”
+- 2- “Como cliente, quero agendar um banho e tosa para meu pet pelo sistema, para garantir um horário conveniente.”
+- 3-“Como funcionário, quero cadastrar novos clientes no sistema, para que possamos registrar seus dados e os de seus pets.”
+- 4-“Como atendente, quero acessar o histórico de serviços e compras de um cliente, para oferecer um atendimento personalizado e eficiente.”
+- 5-“Como cliente, quero visualizar o histórico de pedidos que já fiz no pet shop, para acompanhar minhas compras e serviços prestados.”
+- 6-“Como cliente, quero pagar pelo serviço diretamente no sistema, para maior praticidade e segurança.”
+- 7-“Como cliente, quero visualizar meu perfil com informações dos meus pets e agendamentos, para gerenciar tudo facilmente.”
+- 8-“Como cliente, quero visualizar e comprar produtos para meu pet no sistema, para facilitar minhas compras.”
 
     ### Revisão de Java
 
