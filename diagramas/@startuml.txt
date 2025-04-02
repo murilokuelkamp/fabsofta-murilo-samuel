@@ -1,0 +1,70 @@
+@startuml
+package br.univille.projfabsoftpetshop.entity {
+    class Cliente {
+        - Long id
+        - String nome
+        - String endereco
+        - String telefone
+        - String email
+        - List<Pet> pets
+        - List<Pedido> pedidos
+        - List<Agendamento> agendamentos
+    }
+
+    class Pet {
+        - Long id
+        - String nome
+        - String especie
+        - String raca
+        - int idade
+        - Cliente cliente
+    }
+
+    class Produto {
+        - Long id
+        - String nome
+        - String descricao
+        - int quantidade
+        - double preco
+    }
+
+    class Pedido {
+        - Long id
+        - double total
+        - String status
+        - Cliente cliente
+        - List<Produto> produtos
+    }
+
+    class Pagamento {
+        - Long id
+        - String metodo
+        - String status
+        - Pedido pedido
+    }
+
+    class Agendamento {
+        - Long id
+        - LocalDateTime dataHora
+        - String status
+        - Pet pet
+        - Servico servico
+        - Cliente cliente
+    }
+
+    class Servico {
+        - Long id
+        - String tipo
+        - String descricao
+        - double preco
+    }
+
+    Cliente "1" --> "0..*" Pet
+    Cliente "1" --> "0..*" Pedido
+    Cliente "1" --> "0..*" Agendamento
+    Pedido "1" --> "0..*" Produto
+    Pedido "1" --> "1" Pagamento
+    Agendamento "1" --> "1" Pet
+    Agendamento "1" --> "1" Servico
+}
+@enduml
