@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Pedido {
@@ -20,12 +21,22 @@ public class Pedido {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
     @ManyToMany
     @JoinColumn(name = "produtos_id")
     private List<Produto> produtos;
+
+    @OneToOne
+    private Pagamento pagamento;
+
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
+    }
 
     // Getters e Setters
     public Long getId() {

@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Pagamento {
@@ -15,8 +14,6 @@ public class Pagamento {
     private String metodo;
     private String status;
 
-    @OneToOne
-    private Pedido pedido;
 
     // Getters e Setters
     public Long getId() {
@@ -41,13 +38,5 @@ public class Pagamento {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
     }
 }

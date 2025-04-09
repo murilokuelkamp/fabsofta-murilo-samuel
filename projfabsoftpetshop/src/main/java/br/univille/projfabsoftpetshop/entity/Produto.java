@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Produto {
@@ -17,18 +15,6 @@ public class Produto {
     private String descricao;
     private int quantidade;
     private double preco;
-
-    @ManyToMany
-    @JoinColumn(name = "pedido_id")
-    private Pedido pedido;
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
 
     // Getters e Setters
     public Long getId() {

@@ -1,6 +1,7 @@
 package br.univille.projfabsoftpetshop.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,7 +25,7 @@ public class Agendamento {
 
     @OneToMany
     @JoinColumn(name = "servico_id")
-    private Servico servico;
+    private List<Servico> servico;
 
     @ManyToOne
     private Cliente cliente;
@@ -62,11 +63,11 @@ public class Agendamento {
         this.pet = pet;
     }
 
-    public Servico getServico() {
+    public List<Servico> getServico() {
         return servico;
     }
 
-    public void setServico(Servico servico) {
+    public void setServico(List<Servico> servico) {
         this.servico = servico;
     }
 

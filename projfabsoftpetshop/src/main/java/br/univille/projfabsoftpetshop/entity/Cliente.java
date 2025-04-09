@@ -21,17 +21,9 @@ public class Cliente {
     private String telefone;
     private String email;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "pets_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "cliente_id")
     private List<Pet> pets;
-
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "pedidos_id")
-    private List<Pedido> pedidos;
-
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "agendamentos_id")
-    private List<Agendamento> agendamentos;
 
     // Getters e Setters
     public Long getId() {
@@ -80,21 +72,5 @@ public class Cliente {
 
     public void setPets(List<Pet> pets) {
         this.pets = pets;
-    }
-
-    public List<Pedido> getPedidos() {
-        return pedidos;
-    }
-
-    public void setPedidos(List<Pedido> pedidos) {
-        this.pedidos = pedidos;
-    }
-
-    public List<Agendamento> getAgendamentos() {
-        return agendamentos;
-    }
-
-    public void setAgendamentos(List<Agendamento> agendamentos) {
-        this.agendamentos = agendamentos;
     }
 }
