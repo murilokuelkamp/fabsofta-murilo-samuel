@@ -1,6 +1,10 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Servico {
@@ -11,6 +15,17 @@ public class Servico {
     private String tipo;
     private String descricao;
     private double preco;
+
+    @ManyToOne
+    private Agendamento agendamento;
+
+    public Agendamento getAgendamento() {
+        return agendamento;
+    }
+
+    public void setAgendamento(Agendamento agendamento) {
+        this.agendamento = agendamento;
+    }
 
     // Getters e Setters
     public Long getId() {

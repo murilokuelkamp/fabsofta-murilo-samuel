@@ -60,11 +60,11 @@ package br.univille.projfabsoftpetshop.entity {
     }
 
     Cliente "1" --> "0..*" Pet
-    Cliente "1" --> "0..*" Pedido
-    Cliente "1" --> "0..*" Agendamento
-    Pedido "1" --> "0..*" Produto
+    Cliente "1" <-- "0..*" Pedido
+    Cliente "1" <-- "0..*" Agendamento
+    Pedido "0..*" --> "0..*" Produto
     Pedido "1" --> "1" Pagamento
-    Agendamento "1" --> "1" Pet
-    Agendamento "1" --> "1" Servico
+    Agendamento "0..*" --> "1" Pet
+    Agendamento "1" --> "0..*" Servico
 }
 @enduml

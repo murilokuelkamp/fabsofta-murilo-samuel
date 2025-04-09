@@ -1,7 +1,14 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import jakarta.persistence.*;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cliente {
@@ -15,12 +22,15 @@ public class Cliente {
     private String email;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "pets_id")
     private List<Pet> pets;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "pedidos_id")
     private List<Pedido> pedidos;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "agendamentos_id")
     private List<Agendamento> agendamentos;
 
     // Getters e Setters

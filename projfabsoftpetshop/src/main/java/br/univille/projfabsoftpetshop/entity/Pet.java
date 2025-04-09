@@ -1,6 +1,13 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Pet {
@@ -13,9 +20,20 @@ public class Pet {
     private String raca;
     private int idade;
 
-    @ManyToOne
-    @JoinColumn(name = "cliente_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Cliente cliente;
+
+    @OneToMany
+    @JoinColumn(name = "agendamento_id")
+    private Agendamento agendamento;
+
+    public Agendamento getAgendamento() {
+        return agendamento;
+    }
+
+    public void setAgendamento(Agendamento agendamento) {
+        this.agendamento = agendamento;
+    }
 
     // Getters e Setters
     public Long getId() {

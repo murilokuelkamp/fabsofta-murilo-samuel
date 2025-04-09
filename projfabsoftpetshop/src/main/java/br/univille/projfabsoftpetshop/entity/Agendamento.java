@@ -1,7 +1,14 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Agendamento {
@@ -13,15 +20,13 @@ public class Agendamento {
     private String status;
 
     @ManyToOne
-    @JoinColumn(name = "pet_id")
     private Pet pet;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "servico_id")
     private Servico servico;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
     // Getters e Setters

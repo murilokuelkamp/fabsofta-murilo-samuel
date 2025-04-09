@@ -1,6 +1,10 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Pagamento {
@@ -12,7 +16,6 @@ public class Pagamento {
     private String status;
 
     @OneToOne
-    @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
     // Getters e Setters
