@@ -15,7 +15,7 @@ import jakarta.persistence.OneToOne;
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     private double total;
     private String status;
@@ -39,11 +39,11 @@ public class Pedido {
     }
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

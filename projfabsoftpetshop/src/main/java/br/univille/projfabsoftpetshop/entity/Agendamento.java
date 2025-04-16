@@ -15,7 +15,7 @@ import jakarta.persistence.OneToMany;
 public class Agendamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     private LocalDateTime dataHora;
     private String status;
@@ -31,11 +31,11 @@ public class Agendamento {
     private Cliente cliente;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
