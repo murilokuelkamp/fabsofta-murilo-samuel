@@ -1,4 +1,4 @@
-package br.univille.projfabsoftpetshop.service;
+package br.univille.projfabsoftpetshop.Service;
 
 import java.util.List;
 

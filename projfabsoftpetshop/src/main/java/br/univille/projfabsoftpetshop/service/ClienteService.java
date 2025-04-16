@@ -7,6 +7,6 @@ import br.univille.projfabsoftpetshop.entity.Cliente;
 public interface ClienteService {
     Cliente save(Cliente cliente);
     List<Cliente> getAll();
-    Cliente getByID(long id);
+    Cliente getById(long id);
     Cliente delete(long id);
 }

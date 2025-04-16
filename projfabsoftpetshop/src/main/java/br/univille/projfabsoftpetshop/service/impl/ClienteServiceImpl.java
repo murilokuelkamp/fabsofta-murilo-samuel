@@ -25,7 +25,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public Cliente getByID(long id) {
+    public Cliente getById(long id) {
         var retorno = repository.findById(id);
         if(retorno.isPresent())
             return retorno.get();
@@ -34,7 +34,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente delete(long id) {
-        var cliente = getByID(id);
+        var cliente = getById(id);
         if(cliente != null)
             repository.deleteById(id);
         return cliente;

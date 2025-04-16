@@ -1,13 +1,13 @@
-package br.univille.projfabsoftpetshop.service.impl;
+package br.univille.projfabsoftpetshop.Service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import br.univille.projfabsoftpetshop.entity.Agendamento;
 import br.univille.projfabsoftpetshop.repository.AgendamentoRepository;
-import br.univille.projfabsoftpetshop.service.AgendamentoService;
+import br.univille.projfabsoftpetshop.Service.AgendamentoService;
+
 
 @Service
 public class AgendamentoServiceImpl implements AgendamentoService {
@@ -26,17 +26,19 @@ public class AgendamentoServiceImpl implements AgendamentoService {
     }
 
     @Override
+    public Agendamento delete(long id) {
+        var cliente = getById(id);
+        if(cliente != null)
+            repository.deleteById(id);
+        return cliente;
+    }
+
+    @Override
     public Agendamento getById(long id) {
         var retorno = repository.findById(id);
         if(retorno.isPresent())
         return retorno.get();
         return null;
-    }
-
-    @Override
-    public Agendamento delete(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
 
 }
