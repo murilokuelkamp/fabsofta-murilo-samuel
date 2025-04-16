@@ -22,7 +22,7 @@ public class Cliente {
     private String email;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "cliente_id")
+    @JoinColumn(name = "Cliente_id")
     private List<Pet> pets;
 
     // Getters e Setters
