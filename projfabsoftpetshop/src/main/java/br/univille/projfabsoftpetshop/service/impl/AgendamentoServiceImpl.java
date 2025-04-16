@@ -1,4 +1,4 @@
-package br.univille.projfabsoftpetshop.Service.impl;
+package br.univille.projfabsoftpetshop.service.impl;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import br.univille.projfabsoftpetshop.entity.Agendamento;
 import br.univille.projfabsoftpetshop.repository.AgendamentoRepository;
-import br.univille.projfabsoftpetshop.Service.AgendamentoService;
+import br.univille.projfabsoftpetshop.service.AgendamentoService;
 
 
 @Service
