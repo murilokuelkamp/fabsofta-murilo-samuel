@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -24,7 +23,6 @@ public class Pedido {
     private Cliente cliente;
 
     @ManyToMany
-    @JoinColumn(name = "produtos_id")
     private List<Produto> produtos;
 
     @OneToOne

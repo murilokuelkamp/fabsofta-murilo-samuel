@@ -24,7 +24,7 @@ public class Agendamento {
     private Pet pet;
 
     @OneToMany
-    @JoinColumn(name = "servico_id")
+    @JoinColumn(name = "Agendamento_id")
     private List<Servico> servico;
 
     @ManyToOne
