@@ -1,6 +1,6 @@
 ### API CLIENTE GET
-
 GET http://localhost:8080/api/v1/clientes
+
 
 
 ### API CLIENTE POST
@@ -8,9 +8,25 @@ POST http://localhost:8080/api/v1/clientes
 Content-Type: application/json
 
 {
-    "nome": "SLK",
-    "endereço": "XIQUEXIQUEBAIHA",
-    "email": "Xiquexiquemilgrau.com.br",
-    "telefone": "77777770",
-    "dataNascimento": "1500-01-01"
+    "nome": "zezinho",
+    "endereco": "rua lalala 100",
+    "email": "ze@ze.com.br",
+    "telefone": "5555-1234",
+    "dataNascimento": "2025-04-22"
 }
+
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v1/clientes/1
+Content-Type: application/json
+
+{
+    "nome": "zezinho de oliveira junior",
+    "endereco": "rua lalala 100",
+    "email": "ze@ze.com.br",
+    "telefone": "5555-1234",
+    "dataNascimento": "2025-04-22"
+}
+
+### API CLIENTE DELETE
+DELETE http://localhost:8080/api/v1/clientes/1
