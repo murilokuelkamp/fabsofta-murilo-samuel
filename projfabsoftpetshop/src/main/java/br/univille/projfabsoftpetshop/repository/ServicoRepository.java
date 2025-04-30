@@ -2,9 +2,9 @@ package br.univille.projfabsoftpetshop.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import br.univille.projfabsoftpetshop.entity.Agendamento;
+import br.univille.projfabsoftpetshop.entity.Servico;
 
 @Repository
-public interface AgendamentoRepository extends JpaRepository<Agendamento,Long>{
-        
+public interface ServicoRepository extends JpaRepository<Servico,Long> {
+
 }
