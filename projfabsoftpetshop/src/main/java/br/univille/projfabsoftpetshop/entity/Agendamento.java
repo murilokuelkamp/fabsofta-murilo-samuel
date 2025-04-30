@@ -21,7 +21,7 @@ public class Agendamento {
     private String status;
 
     @ManyToOne
-    private Pet pet;
+    private Pet pets;
 
     @OneToMany
     @JoinColumn(name = "Agendamento_id")
@@ -55,12 +55,12 @@ public class Agendamento {
         this.status = status;
     }
 
-    public Pet getPet() {
-        return pet;
+    public Pet getPets() {
+        return pets;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+    public void setPets(Pet pets) {
+        this.pets = pets;
     }
 
     public List<Servico> getServico() {

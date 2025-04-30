@@ -12,14 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.univille.projfabsoftpetshop.entity.Pedido;
 import br.univille.projfabsoftpetshop.entity.Pedido;
 import br.univille.projfabsoftpetshop.service.PedidoService;
-
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 
 
 @RestController
@@ -58,12 +53,11 @@ public class PedidoController {
             return ResponseEntity.notFound().build();
         }             
 
-        pedidoAntigo.setId(pedido.Id());
-        pedidoAntigo.setTotal(pedidoAntigo.gettotal());
-        pedidoAntigo.setStatus(pedidoAntigo.getstatus());
-        pedidoAntigo.setCliente(pedidoAntigo.cliente());
-        pedidoAntigo.setProdutos(pedidoAntigo.getprodutos());
-        pedidoAntigo.setPagamento(pedidoAntigo.getpagamento());
+        pedidoAntigo.setTotal(pedidoAntigo.getTotal());
+        pedidoAntigo.setStatus(pedidoAntigo.getStatus());
+        pedidoAntigo.setCliente(pedidoAntigo.getCliente());
+        pedidoAntigo.setProdutos(pedidoAntigo.getProdutos());
+        pedidoAntigo.setPagamento(pedidoAntigo.getPagamento());
         service.save(pedidoAntigo);
         return new ResponseEntity<Pedido>(pedidoAntigo, HttpStatus.OK);
     }
@@ -80,4 +74,5 @@ public class PedidoController {
 
         service.delete(id);
         return new ResponseEntity<Pedido>(pedidoExcluir, HttpStatus.OK);  
+}
 }
