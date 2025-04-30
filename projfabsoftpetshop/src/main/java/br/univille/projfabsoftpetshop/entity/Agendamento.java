@@ -3,6 +3,7 @@ package br.univille.projfabsoftpetshop.entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +24,7 @@ public class Agendamento {
     @ManyToOne
     private Pet pets;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "Agendamento_id")
     private List<Servico> servico;
 

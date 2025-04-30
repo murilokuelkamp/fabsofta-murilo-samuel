@@ -2,6 +2,7 @@ package br.univille.projfabsoftpetshop.entity;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +26,7 @@ public class Pedido {
     @ManyToMany
     private List<Produto> produtos;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Pagamento pagamento;
 
     public Pagamento getPagamento() {
