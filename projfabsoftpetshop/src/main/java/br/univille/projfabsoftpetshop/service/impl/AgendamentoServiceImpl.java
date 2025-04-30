@@ -26,19 +26,18 @@ public class AgendamentoServiceImpl implements AgendamentoService {
     }
 
     @Override
-    public Agendamento delete(long id) {
-        var cliente = getById(id);
-        if(cliente != null)
-            repository.deleteById(id);
-        return cliente;
-    }
-
-    @Override
     public Agendamento getById(long id) {
         var retorno = repository.findById(id);
         if(retorno.isPresent())
-        return retorno.get();
+            return retorno.get();
         return null;
     }
-
+    
+    @Override
+    public Agendamento delete(long id) {
+        var agendamento = getById(id);
+        if(agendamento != null)
+            repository.deleteById(id);
+        return agendamento;
+    }
 }
