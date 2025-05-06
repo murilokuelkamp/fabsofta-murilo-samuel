@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @RestController
-@RequestMapping("/api/v1/pedido")
+@RequestMapping("/api/v3/pedido")
 public class PedidoController {
 
     @Autowired
@@ -41,10 +41,8 @@ public class PedidoController {
         }
         return ResponseEntity.badRequest().build();
     }  
-        @PutMapping("/{id}")
-    public ResponseEntity<Pedido>
-        putPedido(@PathVariable long id,
-                    @RequestBody Pedido pedido){
+    @PutMapping("/{id}")
+    public ResponseEntity<Pedido> putPedido(@PathVariable long id, @RequestBody Pedido pedido){
         if(id <= 0 || pedido == null){
             return ResponseEntity.badRequest().build();
         }
@@ -58,6 +56,7 @@ public class PedidoController {
         pedidoAntigo.setCliente(pedidoAntigo.getCliente());
         pedidoAntigo.setProdutos(pedidoAntigo.getProdutos());
         pedidoAntigo.setPagamento(pedidoAntigo.getPagamento());
+
         service.save(pedidoAntigo);
         return new ResponseEntity<Pedido>(pedidoAntigo, HttpStatus.OK);
     }
