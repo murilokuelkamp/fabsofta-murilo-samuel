@@ -42,9 +42,7 @@ public class ClienteController {
         return ResponseEntity.badRequest().build();
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Cliente>
-        putCliente(@PathVariable long id,
-                    @RequestBody Cliente cliente){
+    public ResponseEntity<Cliente> putCliente(@PathVariable long id, @RequestBody Cliente cliente){
         if(id <= 0 || cliente == null){
             return ResponseEntity.badRequest().build();
         }
@@ -54,10 +52,11 @@ public class ClienteController {
         }             
 
         clienteAntigo.setNome(cliente.getNome());
-        clienteAntigo.setEndereco(clienteAntigo.getEndereco());
-        clienteAntigo.setTelefone(clienteAntigo.getTelefone());
-        clienteAntigo.setEmail(clienteAntigo.getEmail());
-        clienteAntigo.setPets(clienteAntigo.getPets());
+        clienteAntigo.setEndereco(cliente.getEndereco());
+        clienteAntigo.setTelefone(cliente.getTelefone());
+        clienteAntigo.setEmail(cliente.getEmail());
+        clienteAntigo.setDataNascimento(cliente.getDataNascimento());
+        clienteAntigo.setPets(cliente.getPets());
 
         service.save(clienteAntigo);
         return new ResponseEntity<Cliente>(clienteAntigo, HttpStatus.OK);

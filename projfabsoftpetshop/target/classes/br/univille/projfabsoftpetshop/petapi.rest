@@ -10,7 +10,7 @@ Content-Type: application/json
     "nome": "zeus",
     "especie": "Cachorro",
     "raca": "srd-Sem Raça Definida",
-    "idade": "5",
+    "idade": "5"
 }
 
 
@@ -22,7 +22,7 @@ Content-Type: application/json
     "nome": "zeus teodoro",
     "especie": "Cachorro",
     "raca": "srd-Sem Raça Definida",
-    "idade": "5",
+    "idade": "5"
 }
 
 ### API PET DELETE
