@@ -8,8 +8,24 @@ Content-Type: application/json
 {
     "total": "1199",
     "status": "Concluido",
-    "cliente": "zezinho",
-    "produtos": "Extermina Pulga!",
+    "cliente": {
+                    "id": 1,
+                    "nome": "zezinho de oliveira junior",
+                    "endereco": "rua lalala 100",
+                    "telefone": "5555-1234",
+                    "email": "ze@ze.com.br",
+                    "dataNascimento": "2025-04-21",
+                    "pets": []
+                },
+    "produtos": [
+        {
+                    "id": 1,
+                    "nome": "Extermina Pulga!",
+                    "descricao": null,
+                    "quantidade": 5,
+                    "preco": 0.0
+                }
+        ],
     "pagamentos": "Pix"
     
 }
@@ -19,10 +35,26 @@ PUT http://localhost:8080/api/v3/pedido/1
 Content-Type: application/json
 
 {
-    "total": "199",
+   "total": "1199",
     "status": "Concluido",
-    "cliente": "zezinho de oliveira junior",
-    "produtos": "Extermina Pulga!",
+    "cliente": {
+                    "id": 1,
+                    "nome": "zezinho de oliveira junior",
+                    "endereco": "rua lalala 100",
+                    "telefone": "5555-1234",
+                    "email": "ze@ze.com.br",
+                    "dataNascimento": "2025-04-21",
+                    "pets": []
+                },
+    "produtos": [
+        {
+                    "id": 1,
+                    "nome": "Extermina Pulga!",
+                    "descricao": null,
+                    "quantidade": 5,
+                    "preco": 0.0
+                }
+                ],
     "pagamentos": "Pix"
     
 }

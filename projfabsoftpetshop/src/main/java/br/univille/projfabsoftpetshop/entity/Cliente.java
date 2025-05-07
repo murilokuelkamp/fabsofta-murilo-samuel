@@ -1,5 +1,6 @@
 package br.univille.projfabsoftpetshop.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class Cliente {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "Cliente_id")
-    private List<Pet> pets;
+    private List<Pet> pets = new ArrayList<>();
 
     // Getters e Setters
     public long getId() {

@@ -25,7 +25,8 @@ Content-Type: application/json
     "endereco": "rua lalala 100",
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
-    "dataNascimento": "2025-04-22"
+    "dataNascimento": "2025-04-22",
+    "pets": []
 }
 
 ### API CLIENTE DELETE

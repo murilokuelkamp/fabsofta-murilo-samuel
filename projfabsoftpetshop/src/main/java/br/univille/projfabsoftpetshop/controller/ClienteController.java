@@ -56,7 +56,8 @@ public class ClienteController {
         clienteAntigo.setTelefone(cliente.getTelefone());
         clienteAntigo.setEmail(cliente.getEmail());
         clienteAntigo.setDataNascimento(cliente.getDataNascimento());
-        clienteAntigo.setPets(cliente.getPets());
+        clienteAntigo.getPets().clear();
+        clienteAntigo.getPets().addAll(cliente.getPets());
 
         service.save(clienteAntigo);
         return new ResponseEntity<Cliente>(clienteAntigo, HttpStatus.OK);

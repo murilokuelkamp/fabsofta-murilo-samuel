@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ### API CLIENTE PUT
-PUT http://localhost:8080/api/v1/clientes/2
+PUT http://localhost:8080/api/v1/clientes/1
 Content-Type: application/json
 
 {
@@ -25,7 +25,8 @@ Content-Type: application/json
     "endereco": "rua lalala 100",
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
-    "dataNascimento": "2025-04-22"
+    "dataNascimento": "2025-04-22",
+    "pets": []
 }
 
 ### API CLIENTE DELETE
