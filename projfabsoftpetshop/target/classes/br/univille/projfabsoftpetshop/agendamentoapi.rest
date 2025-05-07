@@ -1,0 +1,48 @@
+### API CLIENTE GET
+GET http://localhost:8080/api/v2/agendamento
+
+
+
+### API CLIENTE POST
+POST http://localhost:8080/api/v2/agendamento
+Content-Type: application/json
+
+{
+    "datahora": "25/12/2026",
+    "status": "Finalizado",
+    "pets": "Zeus teodoro",
+    "servico": "Banho e Tosa",
+    "cliente": {
+                    "id": 1,
+                    "nome": "zezinho de oliveira junior",
+                    "endereco": "rua lalala 100",
+                    "telefone": "5555-1234",
+                    "email": "ze@ze.com.br",
+                    "dataNascimento": "2025-04-21",
+                    "pets": []
+                },
+}
+
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v2/agendamento/1
+Content-Type: application/json
+
+{
+     "datahora": "25/12/2026",
+    "status": "Finalizado",
+    "pets": "Zeus teodoro do Jet",
+    "servico": "Banho e Tosa",
+    "cliente": {
+                    "id": 1,
+                    "nome": "zezinho de oliveira junior",
+                    "endereco": "rua lalala 100",
+                    "telefone": "5555-1234",
+                    "email": "ze@ze.com.br",
+                    "dataNascimento": "2025-04-21",
+                    "pets": []
+                },
+}
+
+### API CLIENTE DELETE
+DELETE http://localhost:8080/api/v2/agendamento/

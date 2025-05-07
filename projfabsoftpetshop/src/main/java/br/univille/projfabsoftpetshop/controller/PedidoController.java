@@ -16,7 +16,6 @@ import br.univille.projfabsoftpetshop.entity.Pedido;
 import br.univille.projfabsoftpetshop.service.PedidoService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @RestController
 @RequestMapping("/api/v3/pedido")
 public class PedidoController {
@@ -25,53 +24,55 @@ public class PedidoController {
     private PedidoService service;
 
     @GetMapping
-    public ResponseEntity<List<Pedido>> getPedido(){
+    public ResponseEntity<List<Pedido>> getPedido() {
         var listaPedido = service.getAll();
 
         return new ResponseEntity<List<Pedido>>(listaPedido, HttpStatus.OK);
     }
-    @PostMapping 
-    public ResponseEntity<Pedido> postPedido(@RequestBody Pedido pedido){
-        if(pedido == null){
-          return ResponseEntity.badRequest().build();
+
+    @PostMapping
+    public ResponseEntity<Pedido> postPedido(@RequestBody Pedido pedido) {
+        if (pedido == null) {
+            return ResponseEntity.badRequest().build();
         }
-        if(pedido.getId() == 0){
+        if (pedido.getId() == 0) {
             service.save(pedido);
             return new ResponseEntity<Pedido>(pedido, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
-    }  
+    }
+
     @PutMapping("/{id}")
-    public ResponseEntity<Pedido> putPedido(@PathVariable long id, @RequestBody Pedido pedido){
-        if(id <= 0 || pedido == null){
+    public ResponseEntity<Pedido> putPedido(@PathVariable long id, @RequestBody Pedido pedido) {
+        if (id <= 0 || pedido == null) {
             return ResponseEntity.badRequest().build();
         }
         var pedidoAntigo = service.getById(id);
-        if(pedidoAntigo == null){
+        if (pedidoAntigo == null) {
             return ResponseEntity.notFound().build();
-        }             
+        }
 
-        pedidoAntigo.setTotal(pedidoAntigo.getTotal());
-        pedidoAntigo.setStatus(pedidoAntigo.getStatus());
-        pedidoAntigo.setCliente(pedidoAntigo.getCliente());
-        pedidoAntigo.setProdutos(pedidoAntigo.getProdutos());
-        pedidoAntigo.setPagamento(pedidoAntigo.getPagamento());
+        pedidoAntigo.setTotal(pedido.getTotal());
+        pedidoAntigo.setStatus(pedido.getStatus());
+        pedidoAntigo.setCliente(pedido.getCliente());
+        pedidoAntigo.setProdutos(pedido.getProdutos());
+        pedidoAntigo.setPagamento(pedido.getPagamento());
 
         service.save(pedidoAntigo);
         return new ResponseEntity<Pedido>(pedidoAntigo, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Pedido> deletePedido(@PathVariable long id){
-        if(id <= 0){
+    public ResponseEntity<Pedido> deletePedido(@PathVariable long id) {
+        if (id <= 0) {
             return ResponseEntity.badRequest().build();
         }
         var pedidoExcluir = service.getById(id);
-        if(pedidoExcluir == null){
+        if (pedidoExcluir == null) {
             return ResponseEntity.notFound().build();
         }
 
         service.delete(id);
-        return new ResponseEntity<Pedido>(pedidoExcluir, HttpStatus.OK);  
-}
+        return new ResponseEntity<Pedido>(pedidoExcluir, HttpStatus.OK);
+    }
 }

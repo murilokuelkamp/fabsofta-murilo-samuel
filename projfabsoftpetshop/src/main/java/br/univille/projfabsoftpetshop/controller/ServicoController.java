@@ -24,46 +24,49 @@ public class ServicoController {
     private ServicoService service;
 
     @GetMapping
-    public ResponseEntity<List<Servico>> getServico(){
+    public ResponseEntity<List<Servico>> getServico() {
         var listaServico = service.getAll();
 
         return new ResponseEntity<List<Servico>>(listaServico, HttpStatus.OK);
     }
+
     @PostMapping
-    public ResponseEntity<Servico> postServico(@RequestBody Servico servico){
-        if(servico == null){
-          return ResponseEntity.badRequest().build();
+    public ResponseEntity<Servico> postServico(@RequestBody Servico servico) {
+        if (servico == null) {
+            return ResponseEntity.badRequest().build();
         }
-        if(servico.getId() == 0){
+        if (servico.getId() == 0) {
             service.save(servico);
             return new ResponseEntity<Servico>(servico, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
     }
+
     @PutMapping("/{id}")
-    public ResponseEntity<Servico> putServico(@PathVariable long id, @RequestBody Servico servico){
-        if(id <= 0 || servico == null){
+    public ResponseEntity<Servico> putServico(@PathVariable long id, @RequestBody Servico servico) {
+        if (id <= 0 || servico == null) {
             return ResponseEntity.badRequest().build();
         }
         var servicoAntigo = service.getById(id);
-        if(servicoAntigo == null){
+        if (servicoAntigo == null) {
             return ResponseEntity.notFound().build();
-        }             
+        }
 
         servicoAntigo.setTipo(servico.getTipo());
-        servicoAntigo.setDescricao(servicoAntigo.getDescricao());
-        servicoAntigo.setPreco(servicoAntigo.getPreco());
+        servicoAntigo.setDescricao(servico.getDescricao());
+        servicoAntigo.setPreco(servico.getPreco());
 
         service.save(servicoAntigo);
         return new ResponseEntity<Servico>(servicoAntigo, HttpStatus.OK);
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<Servico> deleteServico(@PathVariable long id){
-        if(id <= 0){
+    public ResponseEntity<Servico> deleteServico(@PathVariable long id) {
+        if (id <= 0) {
             return ResponseEntity.badRequest().build();
         }
         var servicoExcluir = service.getById(id);
-        if(servicoExcluir == null){
+        if (servicoExcluir == null) {
             return ResponseEntity.notFound().build();
         }
 

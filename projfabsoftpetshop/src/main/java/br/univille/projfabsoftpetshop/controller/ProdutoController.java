@@ -24,47 +24,50 @@ public class ProdutoController {
     private ProdutoService service;
 
     @GetMapping
-    public ResponseEntity<List<Produto>> getPedido(){
+    public ResponseEntity<List<Produto>> getPedido() {
         var listaProduto = service.getAll();
 
         return new ResponseEntity<List<Produto>>(listaProduto, HttpStatus.OK);
     }
+
     @PostMapping
-    public ResponseEntity<Produto> postProduto(@RequestBody Produto produto){
-        if(produto == null){
-          return ResponseEntity.badRequest().build();
+    public ResponseEntity<Produto> postProduto(@RequestBody Produto produto) {
+        if (produto == null) {
+            return ResponseEntity.badRequest().build();
         }
-        if(produto.getId() == 0){
+        if (produto.getId() == 0) {
             service.save(produto);
             return new ResponseEntity<Produto>(produto, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
     }
+
     @PutMapping("/{id}")
-    public ResponseEntity<Produto> putProduto(@PathVariable long id, @RequestBody Produto produto){
-        if(id <= 0 || produto == null){
+    public ResponseEntity<Produto> putProduto(@PathVariable long id, @RequestBody Produto produto) {
+        if (id <= 0 || produto == null) {
             return ResponseEntity.badRequest().build();
         }
         var produtoAntigo = service.getById(id);
-        if(produtoAntigo == null){
+        if (produtoAntigo == null) {
             return ResponseEntity.notFound().build();
-        }             
+        }
 
         produtoAntigo.setNome(produto.getNome());
-        produtoAntigo.setDescricao(produtoAntigo.getDescricao());
-        produtoAntigo.setQuantidade(produtoAntigo.getQuantidade());
-        produtoAntigo.setPreco(produtoAntigo.getPreco());
+        produtoAntigo.setDescricao(produto.getDescricao());
+        produtoAntigo.setQuantidade(produto.getQuantidade());
+        produtoAntigo.setPreco(produto.getPreco());
 
         service.save(produtoAntigo);
         return new ResponseEntity<Produto>(produtoAntigo, HttpStatus.OK);
     }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity<Produto> deleteProduto(@PathVariable long id){
-        if(id <= 0){
+    public ResponseEntity<Produto> deleteProduto(@PathVariable long id) {
+        if (id <= 0) {
             return ResponseEntity.badRequest().build();
         }
         var produtoExcluir = service.getById(id);
-        if(produtoExcluir == null){
+        if (produtoExcluir == null) {
             return ResponseEntity.notFound().build();
         }
 

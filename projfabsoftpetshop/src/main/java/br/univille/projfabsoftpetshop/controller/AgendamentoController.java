@@ -23,39 +23,40 @@ public class AgendamentoController {
     private AgendamentoService service;
 
     @GetMapping
-    public ResponseEntity<List<Agendamento>> getAgendamento(){
+    public ResponseEntity<List<Agendamento>> getAgendamento() {
         var listaAgendamento = service.getAll();
-        
+
         return new ResponseEntity<List<Agendamento>>(listaAgendamento, HttpStatus.OK);
     }
+
     @PostMapping
-    public ResponseEntity<Agendamento> postAgendamento(@RequestBody Agendamento agendamento){
-        if(agendamento == null){
+    public ResponseEntity<Agendamento> postAgendamento(@RequestBody Agendamento agendamento) {
+        if (agendamento == null) {
             return ResponseEntity.badRequest().build();
         }
-        if(agendamento.getId() == 0){
+        if (agendamento.getId() == 0) {
             service.save(agendamento);
             return new ResponseEntity<Agendamento>(agendamento, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
     }
+
     @PutMapping("/{id}")
-    public ResponseEntity<Agendamento>
-        putAgendamento(@PathVariable long id,
-                    @RequestBody Agendamento agendamento){
-        if(id <= 0 || agendamento == null){
+    public ResponseEntity<Agendamento> putAgendamento(@PathVariable long id,
+            @RequestBody Agendamento agendamento) {
+        if (id <= 0 || agendamento == null) {
             return ResponseEntity.badRequest().build();
         }
         var agendamentoAntigo = service.getById(id);
-        if(agendamentoAntigo == null){
+        if (agendamentoAntigo == null) {
             return ResponseEntity.notFound().build();
-        }             
+        }
 
         agendamentoAntigo.setDataHora(agendamento.getDataHora());
-        agendamentoAntigo.setStatus(agendamentoAntigo.getStatus());
-        agendamentoAntigo.setPets(agendamentoAntigo.getPets());
-        agendamentoAntigo.setServico(agendamentoAntigo.getServico());
-        agendamentoAntigo.setCliente(agendamentoAntigo.getCliente());
+        agendamentoAntigo.setStatus(agendamento.getStatus());
+        agendamentoAntigo.setPets(agendamento.getPets());
+        agendamentoAntigo.setServico(agendamento.getServico());
+        agendamentoAntigo.setCliente(agendamento.getCliente());
 
         service.save(agendamentoAntigo);
         return new ResponseEntity<Agendamento>(agendamentoAntigo, HttpStatus.OK);
