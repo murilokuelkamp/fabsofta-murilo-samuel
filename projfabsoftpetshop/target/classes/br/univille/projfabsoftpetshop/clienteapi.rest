@@ -12,7 +12,16 @@ Content-Type: application/json
     "endereco": "rua lalala 100",
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
-    "dataNascimento": "2025-04-22"
+    "dataNascimento": "2005-04-22",
+    "pets": [
+            {
+            "id": 1,
+            "nome": "zeus teodoro",
+            "especie": "Cachorro",
+            "raca": "srd-Sem Raça Definida",
+            "idade": 5
+            }
+    ]
 }
 
 
@@ -25,8 +34,16 @@ Content-Type: application/json
     "endereco": "rua lalala 100",
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
-    "dataNascimento": "2025-04-22",
-    "pets": []
+    "dataNascimento": "2005-04-22",
+    "pets": [
+            {
+            "id": 1,
+            "nome": "zeus teodoro",
+            "especie": "Cachorro",
+            "raca": "srd-Sem Raça Definida",
+            "idade": 5
+            }
+    ]
 }
 
 ### API CLIENTE DELETE

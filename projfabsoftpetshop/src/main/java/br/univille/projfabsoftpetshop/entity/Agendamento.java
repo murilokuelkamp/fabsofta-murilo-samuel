@@ -1,6 +1,7 @@
 package br.univille.projfabsoftpetshop.entity;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -26,7 +27,7 @@ public class Agendamento {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "Agendamento_id")
-    private List<Servico> servico;
+    private List<Servico> servico = new ArrayList<>();
 
     @ManyToOne
     private Cliente cliente;

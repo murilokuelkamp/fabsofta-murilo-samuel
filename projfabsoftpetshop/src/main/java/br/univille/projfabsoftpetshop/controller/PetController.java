@@ -49,10 +49,10 @@ public class PetController {
             return ResponseEntity.notFound().build();
         }
 
-        petAntigo.setNome(petAntigo.getNome());
-        petAntigo.setEspecie(petAntigo.getEspecie());
-        petAntigo.setRaca(petAntigo.getRaca());
-        petAntigo.setIdade(petAntigo.getIdade());
+        petAntigo.setNome(pet.getNome());
+        petAntigo.setEspecie(pet.getEspecie());
+        petAntigo.setRaca(pet.getRaca());
+        petAntigo.setIdade(pet.getIdade());
 
         service.save(petAntigo);
         return new ResponseEntity<Pet>(petAntigo, HttpStatus.OK);
