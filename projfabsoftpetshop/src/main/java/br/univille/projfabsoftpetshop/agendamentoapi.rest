@@ -9,18 +9,31 @@ Content-Type: application/json
 
 {
     "datahora": "25/12/2026",
-    "status": "Finalizado",
-    "pets": "Zeus teodoro",
-    "servico": "Banho e Tosa",
-    "cliente": {
-                    "id": 1,
-                    "nome": "zezinho de oliveira junior",
-                    "endereco": "rua lalala 100",
-                    "telefone": "5555-1234",
-                    "email": "ze@ze.com.br",
-                    "dataNascimento": "2025-04-21",
-                    "pets": []
-                },
+    "status": "Esperando",
+    "pets":{
+                "id": 1,
+                "nome": "zeus teodoro",
+                "especie": "Cachorro",
+                "raca": "srd-Sem Raça Definida",
+                "idade": 5
+            },
+    "servico": [
+            {
+                "id": 1,
+                "tipo": "Banho e tosa",
+                "descricao": null,
+                "preco": 0.0
+            }
+    ],
+    "cliente":{
+                "id": 1,
+                "nome": "zezinho de oliveira junior",
+                "endereco": "rua lalala 100",
+                "telefone": "5555-1234",
+                "email": "ze@ze.com.br",
+                "dataNascimento": "2025-04-21",
+                "pets": []
+            }
 }
 
 
@@ -29,19 +42,32 @@ PUT http://localhost:8080/api/v1/agendamento/1
 Content-Type: application/json
 
 {
-     "datahora": "25/12/2026",
+    "datahora": "25/12/2026",
     "status": "Finalizado",
-    "pets": "Zeus teodoro do Jet",
-    "servico": "Banho e Tosa",
-    "cliente": {
-                    "id": 1,
-                    "nome": "zezinho de oliveira junior",
-                    "endereco": "rua lalala 100",
-                    "telefone": "5555-1234",
-                    "email": "ze@ze.com.br",
-                    "dataNascimento": "2025-04-21",
-                    "pets": []
-                },
+    "pets":{
+                "id": 1,
+                "nome": "zeus teodoro",
+                "especie": "Cachorro",
+                "raca": "srd-Sem Raça Definida",
+                "idade": 5
+            },
+    "servico":[
+            {
+                "id": 1,
+                "tipo": "Banho e tosa",
+                "descricao": null,
+                "preco": 0.0
+            }
+    ],
+    "cliente":{
+                "id": 1,
+                "nome": "zezinho de oliveira junior",
+                "endereco": "rua lalala 100",
+                "telefone": "5555-1234",
+                "email": "ze@ze.com.br",
+                "dataNascimento": "2025-04-21",
+                "pets": []
+            }
 }
 
 ### API CLIENTE DELETE
