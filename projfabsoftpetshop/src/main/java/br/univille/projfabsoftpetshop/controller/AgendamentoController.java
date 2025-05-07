@@ -55,7 +55,8 @@ public class AgendamentoController {
         agendamentoAntigo.setDataHora(agendamento.getDataHora());
         agendamentoAntigo.setStatus(agendamento.getStatus());
         agendamentoAntigo.setPets(agendamento.getPets());
-        agendamentoAntigo.setServico(agendamento.getServico());
+        agendamentoAntigo.getServico().clear();
+        agendamentoAntigo.getServico().addAll(agendamento.getServico());
         agendamentoAntigo.setCliente(agendamento.getCliente());
 
         service.save(agendamentoAntigo);

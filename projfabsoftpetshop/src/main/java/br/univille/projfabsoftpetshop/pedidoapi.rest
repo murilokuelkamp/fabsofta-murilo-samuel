@@ -1,7 +1,8 @@
+###  API PEDIDO GET
 GET http://localhost:8080/api/v3/pedido
 
 
-### API PET POST
+### API PEDIDO POST
 POST http://localhost:8080/api/v3/pedido
 Content-Type: application/json
 
@@ -30,7 +31,7 @@ Content-Type: application/json
     
 }
 
-### API CLIENTE PUT
+### API PEDIDO PUT
 PUT http://localhost:8080/api/v3/pedido/1
 Content-Type: application/json
 
@@ -59,5 +60,5 @@ Content-Type: application/json
     
 }
 
-### API PET DELETE
+### API PEDIDO DELETE
 DELETE http://localhost:8080/api/v3/pedido/1

@@ -30,7 +30,7 @@ public class Cliente {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "Cliente_id")
     private List<Pet> pets = new ArrayList<>();
 

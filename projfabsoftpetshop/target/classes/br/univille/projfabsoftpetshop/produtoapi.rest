@@ -1,7 +1,8 @@
+### API PRODUTO GET
 GET http://localhost:8080/api/v5/produto
 
 
-### API PET POST
+### API PRODUTO POST
 POST http://localhost:8080/api/v5/produto
 Content-Type: application/json
 
@@ -13,7 +14,7 @@ Content-Type: application/json
     
 }
 
-### API CLIENTE PUT
+### API PRODUTO PUT
 PUT http://localhost:8080/api/v5/produto/1
 Content-Type: application/json
 
@@ -24,5 +25,5 @@ Content-Type: application/json
     "preço": "129"
 }
 
-### API PET DELETE
+### API PRODUTO DELETE
 DELETE http://localhost:8080/api/v5/produto/1

@@ -55,7 +55,8 @@ public class PedidoController {
         pedidoAntigo.setTotal(pedido.getTotal());
         pedidoAntigo.setStatus(pedido.getStatus());
         pedidoAntigo.setCliente(pedido.getCliente());
-        pedidoAntigo.setProdutos(pedido.getProdutos());
+        pedidoAntigo.getProdutos().clear();
+        pedidoAntigo.getProdutos().addAll(pedido.getProdutos());
         pedidoAntigo.setPagamento(pedido.getPagamento());
 
         service.save(pedidoAntigo);
