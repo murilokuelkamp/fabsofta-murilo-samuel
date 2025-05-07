@@ -50,7 +50,7 @@ public class ServicoController {
             return ResponseEntity.notFound().build();
         }             
 
-        servicoAntigo.setTipo(servicoAntigo.getTipo());
+        servicoAntigo.setTipo(servico.getTipo());
         servicoAntigo.setDescricao(servicoAntigo.getDescricao());
         servicoAntigo.setPreco(servicoAntigo.getPreco());
 

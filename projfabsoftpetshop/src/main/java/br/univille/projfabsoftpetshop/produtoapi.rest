@@ -1,0 +1,28 @@
+GET http://localhost:8080/api/v5/produto
+
+
+### API PET POST
+POST http://localhost:8080/api/v5/produto
+Content-Type: application/json
+
+{
+    "nome": "Mata Pulga",
+    "descrição": "Eliminando a pulga de seu cachorro, em 5 minutos",
+    "quantidade": "5",
+    "preço": "129"
+    
+}
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v5/produto/1
+Content-Type: application/json
+
+{
+    "nome": "Extermina Pulga!",
+    "descrição": "Eliminando a pulga de seu cachorro, em 5 minutos",
+    "quantidade": "5",
+    "preço": "129"
+}
+
+### API PET DELETE
+DELETE http://localhost:8080/api/v5/produto/1

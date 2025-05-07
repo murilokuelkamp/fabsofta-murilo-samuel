@@ -1,0 +1,31 @@
+GET http://localhost:8080/api/v3/pedido
+
+
+### API PET POST
+POST http://localhost:8080/api/v3/pedido
+Content-Type: application/json
+
+{
+    "total": "1199",
+    "status": "Concluido",
+    "cliente": "zezinho",
+    "produtos": "Extermina Pulga!",
+    "pagamentos": "Pix"
+    
+}
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v3/pedido/1
+Content-Type: application/json
+
+{
+    "total": "199",
+    "status": "Concluido",
+    "cliente": "zezinho de oliveira junior",
+    "produtos": "Extermina Pulga!",
+    "pagamentos": "Pix"
+    
+}
+
+### API PET DELETE
+DELETE http://localhost:8080/api/v3/pedido/1

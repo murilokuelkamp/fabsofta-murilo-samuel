@@ -1,0 +1,26 @@
+GET http://localhost:8080/api/v6/servico
+
+
+### API PET POST
+POST http://localhost:8080/api/v6/servico
+Content-Type: application/json
+
+{
+    "tipo": "Banho",
+    "descrição": "Banho completo ",
+    "preço": "129"
+    
+}
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v6/servico/1
+Content-Type: application/json
+
+{
+    "tipo": "Banho e tosa",
+    "descrição": "Banho completo ",
+    "preço": "129"
+}
+
+### API PET DELETE
+DELETE http://localhost:8080/api/v6/servico/1
