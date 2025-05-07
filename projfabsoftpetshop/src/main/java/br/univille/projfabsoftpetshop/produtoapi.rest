@@ -1,9 +1,9 @@
 ### API PRODUTO GET
-GET http://localhost:8080/api/v5/produto
+GET http://localhost:8080/api/v1/produto
 
 
 ### API PRODUTO POST
-POST http://localhost:8080/api/v5/produto
+POST http://localhost:8080/api/v1/produto
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### API PRODUTO PUT
-PUT http://localhost:8080/api/v5/produto/1
+PUT http://localhost:8080/api/v1/produto/1
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ### API PRODUTO DELETE
-DELETE http://localhost:8080/api/v5/produto/1
+DELETE http://localhost:8080/api/v1/produto/1

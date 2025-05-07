@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.service.PedidoService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("/api/v3/pedido")
+@RequestMapping("/api/v1/pedido")
 public class PedidoController {
 
     @Autowired

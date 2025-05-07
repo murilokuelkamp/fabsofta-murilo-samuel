@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.entity.Servico;
 import br.univille.projfabsoftpetshop.service.ServicoService;
 
 @RestController
-@RequestMapping("/api/v6/servico")
+@RequestMapping("/api/v1/servico")
 public class ServicoController {
 
     @Autowired

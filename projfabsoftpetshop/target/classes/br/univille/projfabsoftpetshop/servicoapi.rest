@@ -1,8 +1,9 @@
-GET http://localhost:8080/api/v6/servico
+### API SERVICO GET
+GET http://localhost:8080/api/v1/servico
 
 
-### API PET POST
-POST http://localhost:8080/api/v6/servico
+### API SERVICO POST
+POST http://localhost:8080/api/v1/servico
 Content-Type: application/json
 
 {
@@ -12,8 +13,8 @@ Content-Type: application/json
     
 }
 
-### API CLIENTE PUT
-PUT http://localhost:8080/api/v6/servico/1
+### API SERVICO PUT
+PUT http://localhost:8080/api/v1/servico/1
 Content-Type: application/json
 
 {
@@ -22,5 +23,5 @@ Content-Type: application/json
     "preço": "129"
 }
 
-### API PET DELETE
-DELETE http://localhost:8080/api/v6/servico/1
+### API SERVICO DELETE
+DELETE http://localhost:8080/api/v1/servico/1
