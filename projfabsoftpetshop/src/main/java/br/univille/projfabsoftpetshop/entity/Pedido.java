@@ -1,5 +1,6 @@
 package br.univille.projfabsoftpetshop.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -24,7 +25,7 @@ public class Pedido {
     private Cliente cliente;
 
     @ManyToMany
-    private List<Produto> produtos;
+    private List<Produto> produtos = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
     private Pagamento pagamento;
