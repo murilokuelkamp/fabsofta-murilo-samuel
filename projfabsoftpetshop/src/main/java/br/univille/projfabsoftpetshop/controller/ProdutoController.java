@@ -50,7 +50,7 @@ public class ProdutoController {
             return ResponseEntity.notFound().build();
         }             
 
-        produtoAntigo.setNome(produtoAntigo.getNome());
+        produtoAntigo.setNome(produto.getNome());
         produtoAntigo.setDescricao(produtoAntigo.getDescricao());
         produtoAntigo.setQuantidade(produtoAntigo.getQuantidade());
         produtoAntigo.setPreco(produtoAntigo.getPreco());
