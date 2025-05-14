@@ -7,25 +7,33 @@ POST http://localhost:8080/api/v1/pedido
 Content-Type: application/json
 
 {
-    "total": "1199.0",
+    "total": "129.0",
     "status": "Em Processo",
     "cliente": {
-                    "id": 1,
-                    "nome": "zezinho de oliveira junior",
-                    "endereco": "rua lalala 100",
-                    "telefone": "5555-1234",
-                    "email": "ze@ze.com.br",
-                    "dataNascimento": "2025-04-21",
-                    "pets": []
-                },
+        "id": 1,
+        "nome": "zezinho de oliveira junior",
+        "endereco": "rua lalala 100",
+        "telefone": "5555-1234",
+        "email": "ze@ze.com.br",
+        "dataNascimento": "2005-04-21",
+        "pets": [
+            {
+                "id": 1,
+                "nome": "zeus teodoro",
+                "especie": "Cachorro",
+                "raca": "srd-Sem Raça Definida",
+                "idade": 5
+            }
+        ]
+    },
     "produtos": [
-        {
-                    "id": 1,
-                    "nome": "Extermina Pulga!",
-                    "descricao": null,
-                    "quantidade": 5,
-                    "preco": 0.0
-                }
+            {
+                "id": 1,
+                "nome": "Extermina Pulga!",
+                "descricao": "Eliminando a pulga de seu cachorro, em 5 minutos",
+                "quantidade": 5,
+                "preco": 129.0
+            }
         ],
     "pagamentos": "Pix"
     
@@ -36,26 +44,34 @@ PUT http://localhost:8080/api/v1/pedido/1
 Content-Type: application/json
 
 {
-   "total": "1199",
+   "total": "129.0",
     "status": "Concluido",
     "cliente": {
-                    "id": 1,
-                    "nome": "zezinho de oliveira junior",
-                    "endereco": "rua lalala 100",
-                    "telefone": "5555-1234",
-                    "email": "ze@ze.com.br",
-                    "dataNascimento": "2025-04-21",
-                    "pets": []
-                },
+        "id": 1,
+        "nome": "zezinho de oliveira junior",
+        "endereco": "rua lalala 100",
+        "telefone": "5555-1234",
+        "email": "ze@ze.com.br",
+        "dataNascimento": "2005-04-21",
+        "pets": [
+            {
+                "id": 1,
+                "nome": "zeus teodoro",
+                "especie": "Cachorro",
+                "raca": "srd-Sem Raça Definida",
+                "idade": 5
+            }
+        ]
+    },
     "produtos": [
-        {
-                    "id": 1,
-                    "nome": "Extermina Pulga!",
-                    "descricao": null,
-                    "quantidade": 5,
-                    "preco": 0.0
-                }
-                ],
+            {
+                "id": 1,
+                "nome": "Extermina Pulga!",
+                "descricao": "Eliminando a pulga de seu cachorro, em 5 minutos",
+                "quantidade": 5,
+                "preco": 129.0
+            }
+        ],
     "pagamentos": "Pix"
     
 }
