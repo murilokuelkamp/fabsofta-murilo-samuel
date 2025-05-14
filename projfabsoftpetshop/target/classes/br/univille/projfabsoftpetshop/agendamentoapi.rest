@@ -8,40 +8,40 @@ POST http://localhost:8080/api/v1/agendamento
 Content-Type: application/json
 
 {
-    "datahora": "25/12/2026",
+    "datahora": "2026-12-25T10:00:00",   
     "status": "Esperando",
-    "pets":{
+    "pets": {
+        "id": 1,
+        "nome": "zeus teodoro",
+        "especie": "Cachorro",
+        "raca": "srd-Sem Raça Definida",
+        "idade": 5
+    },
+    "servico": [
+        {
+            "id": 1,
+            "tipo": "Banho e tosa",
+            "descricao": "Banho completo ",
+            "preco": 129.0
+        }
+    ],
+    "cliente": {
+        "id": 1,
+        "nome": "zezinho de oliveira junior",
+        "endereco": "rua lalala 100",
+        "telefone": "5555-1234",
+        "email": "ze@ze.com.br",
+        "dataNascimento": "2005-04-21",
+        "pets": [
+            {
                 "id": 1,
                 "nome": "zeus teodoro",
                 "especie": "Cachorro",
                 "raca": "srd-Sem Raça Definida",
                 "idade": 5
-            },
-    "servico": [
-            {
-                "id": 1,
-                "tipo": "Banho e tosa",
-                "descricao": "Banho completo ",
-                "preco": 129.0
             }
-    ],
-    "cliente":{
-                "id": 1,
-                "nome": "zezinho de oliveira junior",
-                "endereco": "rua lalala 100",
-                "telefone": "5555-1234",
-                "email": "ze@ze.com.br",
-                "dataNascimento": "2025-04-21",
-                "pets": {
-                        {
-                        "id": 1,
-                        "nome": "zeus teodoro",
-                        "especie": "Cachorro",
-                        "raca": "srd-Sem Raça Definida",
-                        "idade": 5
-                    }
-                }
-            }
+        ]
+    }
 }
 
 
@@ -50,7 +50,7 @@ PUT http://localhost:8080/api/v1/agendamento/1
 Content-Type: application/json
 
 {
-    "datahora": "25/12/2026",
+    "datahora": "2026-12-25T10:00:00",   
     "status": "Finalizado",
     "pets":{
                 "id": 1,
@@ -66,7 +66,7 @@ Content-Type: application/json
                 "descricao": "Banho completo ",
                 "preco": 129.0
             }
-    ],
+            ],
     "cliente":{
                 "id": 1,
                 "nome": "zezinho de oliveira junior",
@@ -74,7 +74,7 @@ Content-Type: application/json
                 "telefone": "5555-1234",
                 "email": "ze@ze.com.br",
                 "dataNascimento": "2025-04-21",
-                "pets": [{
+                "pets": [
                         {
                         "id": 1,
                         "nome": "zeus teodoro",
@@ -82,7 +82,7 @@ Content-Type: application/json
                         "raca": "srd-Sem Raça Definida",
                         "idade": 5
                     }
-                }]
+                ]
             }
 }
 
