@@ -6,6 +6,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,7 +26,7 @@ public class Agendamento {
     @ManyToOne
     private Pet pets;
 
-    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH})
+    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "Agendamento_id")
     private List<Servico> servico = new ArrayList<>();
 
