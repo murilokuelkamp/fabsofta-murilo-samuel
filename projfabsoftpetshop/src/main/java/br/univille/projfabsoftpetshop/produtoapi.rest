@@ -11,7 +11,6 @@ Content-Type: application/json
     "descricao": "Eliminando a pulga de seu cachorro, em 5 minutos",
     "quantidade": "5",
     "preco": "129.00"
-    
 }
 
 ### API PRODUTO PUT

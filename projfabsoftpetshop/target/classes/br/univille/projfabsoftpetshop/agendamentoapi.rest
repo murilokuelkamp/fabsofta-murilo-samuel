@@ -8,7 +8,7 @@ POST http://localhost:8080/api/v1/agendamento
 Content-Type: application/json
 
 {
-    "datahora": "2026-12-25T10:00:00",   
+    "dataHora": "2026-12-25T10:00:00",   
     "status": "Esperando",
     "pets": {
         "id": 1,
@@ -50,7 +50,7 @@ PUT http://localhost:8080/api/v1/agendamento/1
 Content-Type: application/json
 
 {
-    "datahora": "2026-12-25T10:00:00",   
+    "dataHora": "2026-12-25T10:00:00",   
     "status": "Finalizado",
     "pets":{
                 "id": 1,

@@ -5,6 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,7 +25,7 @@ public class Pedido {
     @ManyToOne
     private Cliente cliente;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Produto> produtos = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
