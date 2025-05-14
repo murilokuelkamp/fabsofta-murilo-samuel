@@ -8,9 +8,9 @@ Content-Type: application/json
 
 {
     "nome": "Mata Pulga",
-    "descrição": "Eliminando a pulga de seu cachorro, em 5 minutos",
+    "descricao": "Eliminando a pulga de seu cachorro, em 5 minutos",
     "quantidade": "5",
-    "preço": "129"
+    "preco": "129.00"
     
 }
 
@@ -20,9 +20,9 @@ Content-Type: application/json
 
 {
     "nome": "Extermina Pulga!",
-    "descrição": "Eliminando a pulga de seu cachorro, em 5 minutos",
+    "descricao": "Eliminando a pulga de seu cachorro, em 5 minutos",
     "quantidade": "5",
-    "preço": "129"
+    "preco": "129.00"
 }
 
 ### API PRODUTO DELETE

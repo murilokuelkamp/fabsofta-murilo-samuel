@@ -8,8 +8,8 @@ Content-Type: application/json
 
 {
     "tipo": "Banho",
-    "descrição": "Banho completo ",
-    "preço": "129"
+    "descricao": "Banho completo ",
+    "preco": "129"
     
 }
 
@@ -19,8 +19,8 @@ Content-Type: application/json
 
 {
     "tipo": "Banho e tosa",
-    "descrição": "Banho completo ",
-    "preço": "129"
+    "descricao": "Banho completo ",
+    "preco": "129"
 }
 
 ### API SERVICO DELETE

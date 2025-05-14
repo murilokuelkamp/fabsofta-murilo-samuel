@@ -25,7 +25,7 @@ public class Agendamento {
     @ManyToOne
     private Pet pets;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH})
     @JoinColumn(name = "Agendamento_id")
     private List<Servico> servico = new ArrayList<>();
 

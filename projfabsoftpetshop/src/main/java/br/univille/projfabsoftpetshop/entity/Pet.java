@@ -56,4 +56,15 @@ public class Pet {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Pet pet = (Pet) obj;
+        return id == pet.id;
+    }
 }

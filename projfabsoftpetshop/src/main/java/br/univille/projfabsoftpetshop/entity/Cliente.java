@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -30,7 +31,7 @@ public class Cliente {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "Cliente_id")
     private List<Pet> pets = new ArrayList<>();
 

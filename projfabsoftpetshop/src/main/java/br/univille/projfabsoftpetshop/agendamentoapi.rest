@@ -21,8 +21,8 @@ Content-Type: application/json
             {
                 "id": 1,
                 "tipo": "Banho e tosa",
-                "descricao": null,
-                "preco": 0.0
+                "descricao": "Banho completo ",
+                "preco": 129.0
             }
     ],
     "cliente":{
@@ -32,7 +32,15 @@ Content-Type: application/json
                 "telefone": "5555-1234",
                 "email": "ze@ze.com.br",
                 "dataNascimento": "2025-04-21",
-                "pets": []
+                "pets": {
+                        {
+                        "id": 1,
+                        "nome": "zeus teodoro",
+                        "especie": "Cachorro",
+                        "raca": "srd-Sem Raça Definida",
+                        "idade": 5
+                    }
+                }
             }
 }
 
@@ -55,8 +63,8 @@ Content-Type: application/json
             {
                 "id": 1,
                 "tipo": "Banho e tosa",
-                "descricao": null,
-                "preco": 0.0
+                "descricao": "Banho completo ",
+                "preco": 129.0
             }
     ],
     "cliente":{
@@ -66,7 +74,15 @@ Content-Type: application/json
                 "telefone": "5555-1234",
                 "email": "ze@ze.com.br",
                 "dataNascimento": "2025-04-21",
-                "pets": []
+                "pets": [{
+                        {
+                        "id": 1,
+                        "nome": "zeus teodoro",
+                        "especie": "Cachorro",
+                        "raca": "srd-Sem Raça Definida",
+                        "idade": 5
+                    }
+                }]
             }
 }
 
