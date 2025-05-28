@@ -1,6 +1,22 @@
 <main class="container">
     <h2>Pets</h2>
     <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Raça</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umPet of listaPets">
+                <td>{{umPet.nome}}</td>
+                <td>{{umPet.especie}}</td>
+                <td>{{umPet.raca}}</td>
+                <td>{{umPet.idade}}</td>
+            </tr>
+        </tbody>
 
     </table>
 </main>
