@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.entity.Produto;
 import br.univille.projfabsoftpetshop.service.ProdutoService;
 
 @RestController
-@RequestMapping("/api/v1/produto")
+@RequestMapping("/api/v1/produtos")
 public class ProdutoController {
 
     @Autowired
