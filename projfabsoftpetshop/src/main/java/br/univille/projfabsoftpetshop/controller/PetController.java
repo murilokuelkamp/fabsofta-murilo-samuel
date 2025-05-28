@@ -16,7 +16,7 @@ import br.univille.projfabsoftpetshop.entity.Pet;
 import br.univille.projfabsoftpetshop.service.PetService;
 
 @RestController
-@RequestMapping("/api/v1/pet")
+@RequestMapping("/api/v1/pets")
 public class PetController {
 
     @Autowired

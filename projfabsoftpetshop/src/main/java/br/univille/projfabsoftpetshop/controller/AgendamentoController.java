@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.entity.Agendamento;
 import br.univille.projfabsoftpetshop.service.AgendamentoService;
 
 @RestController
-@RequestMapping("/api/v1/agendamento")
+@RequestMapping("/api/v1/agendamentos")
 public class AgendamentoController {
 
     @Autowired
