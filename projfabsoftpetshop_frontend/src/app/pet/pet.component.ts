@@ -19,6 +19,6 @@ export class PetComponent {
     ngOnInit(): void {  
       this.petService.getPets().subscribe( resposta => {
         this.listaPets = resposta;
-      })
+      });
     }
 }

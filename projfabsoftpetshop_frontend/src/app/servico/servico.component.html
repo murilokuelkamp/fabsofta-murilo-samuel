@@ -1,0 +1,20 @@
+<main class="container">
+    <h2>Serviços</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umServico of listaServicos">
+                <td>{{umServico.tipo}}</td>
+                <td>{{umServico.descricao}}</td>
+                <td>{{umServico.preco}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>

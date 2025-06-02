@@ -1,9 +1,9 @@
 ### API SERVICO GET
-GET http://localhost:8080/api/v1/servico
+GET http://localhost:8080/api/v1/servicos
 
 
 ### API SERVICO POST
-POST http://localhost:8080/api/v1/servico
+POST http://localhost:8080/api/v1/servicos
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ### API SERVICO PUT
-PUT http://localhost:8080/api/v1/servico/1
+PUT http://localhost:8080/api/v1/servicos/1
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 }
 
 ### API SERVICO DELETE
-DELETE http://localhost:8080/api/v1/servico/1
+DELETE http://localhost:8080/api/v1/servicos/1

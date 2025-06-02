@@ -19,6 +19,6 @@ export class ProdutoComponent {
     ngOnInit(): void {  
       this.produtoService.getPets().subscribe( resposta => {
         this.listaProdutos = resposta;
-      })
+      });
     }
 }
