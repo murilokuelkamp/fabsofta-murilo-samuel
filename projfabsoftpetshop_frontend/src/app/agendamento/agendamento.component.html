@@ -1,0 +1,23 @@
+<main class="container">
+    <h2>Agendamentos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data e Hora</th>
+                <th>Status</th>
+                <th>Pets</th>
+                <th>Serviços</th>
+                <th>Clientes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umAgendamento of listaAgendamentos">
+                <td>{{umAgendamento.dataHora}}</td>
+                <td>{{umAgendamento.status}}</td>
+                <td>{{umAgendamento.pets}}</td>
+                <td>{{umAgendamento.servico}}</td>
+                <td>{{umAgendamento.cliente}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

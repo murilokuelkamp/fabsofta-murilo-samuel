@@ -1,3 +1,5 @@
+import { Pet } from "./pet";
+
 export class Cliente {
     id: number;
     nome: string;
@@ -5,14 +7,6 @@ export class Cliente {
     telefone: string;
     email: string;
     dataNascimento: Date;
-    pets: [
-        {
-        id: number;
-        nome: string;
-        especie: string;
-        raca: string;
-        idade: number;
-        }
-    ]
+    pets: Pet[];
 }
 

@@ -1,0 +1,21 @@
+<main class="container">
+    <h2>Pedidos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Cliente</th>
+                <th>Produtos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umPedido of listaPedidos">
+                <td>{{umPedido.total}}</td>
+                <td>{{umPedido.status}}</td>
+                <td>{{umPedido.cliente}}</td>
+                <td>{{umPedido.produtos}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

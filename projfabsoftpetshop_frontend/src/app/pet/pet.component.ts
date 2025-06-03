@@ -12,13 +12,14 @@ import { CommonModule } from '@angular/common';
   providers: [PetService]
 })
 export class PetComponent {
+  listaPets: Pet[] = [];
 
-      public listaPets: Pet[] = [];
-      constructor(private petService:PetService) {}
+  constructor(private petService: PetService) {}
 
-    ngOnInit(): void {  
-      this.petService.getPets().subscribe( resposta => {
-        this.listaPets = resposta;
-      });
-    }
+  ngOnInit() {
+    console.log("Carregando pets...");
+    this.petService.getPets().subscribe(pets => {
+      this.listaPets = pets;
+    });
+  }
 }
