@@ -7,14 +7,27 @@
                 <th>Status</th>
                 <th>Cliente</th>
                 <th>Produtos</th>
+                <th>Pagamentos</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let umPedido of listaPedidos">
                 <td>{{umPedido.total}}</td>
                 <td>{{umPedido.status}}</td>
-                <td>{{umPedido.cliente}}</td>
-                <td>{{umPedido.produtos}}</td>
+                <td><ul>
+                    <li>{{umPedido.cliente.nome}}</li>
+                    <li>{{umPedido.cliente.endereco}}</li>
+                    <li>{{umPedido.cliente.telefone}}</li>
+                    <li>{{umPedido.cliente.email}}</li>
+                    <li>{{umPedido.cliente.dataNascimento}}</li>
+                </ul></td>
+                <td><ul *ngFor="let umProduto of umPedido.produtos">
+                    <li>{{umProduto.nome}}</li>
+                    <li>{{umProduto.descricao}}</li>
+                    <li>{{umProduto.quantidade}}</li>
+                    <li>{{umProduto.preco}}</li>
+                </ul></td>
+                <td>{{umPedido.pagamentos}}</td>
             </tr>
         </tbody>
     </table>

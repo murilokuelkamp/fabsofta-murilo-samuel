@@ -14,9 +14,24 @@
             <tr *ngFor="let umAgendamento of listaAgendamentos">
                 <td>{{umAgendamento.dataHora}}</td>
                 <td>{{umAgendamento.status}}</td>
-                <td>{{umAgendamento.pets}}</td>
-                <td>{{umAgendamento.servico}}</td>
-                <td>{{umAgendamento.cliente}}</td>
+                <td><ul>
+                    <li>{{umAgendamento.pets.nome}}</li>
+                    <li>{{umAgendamento.pets.especie}}</li>
+                    <li>{{umAgendamento.pets.raca}}</li>
+                    <li>{{umAgendamento.pets.idade}}</li>
+                </ul></td>
+                <td><ul *ngFor="let umServico of umAgendamento.servico">
+                    <li>{{umServico.tipo}}</li>
+                    <li>{{umServico.descricao}}</li>
+                    <li>{{umServico.preco}}</li>
+                </ul></td>
+                <td><ul>
+                    <li>{{umAgendamento.cliente.nome}}</li>
+                    <li>{{umAgendamento.cliente.endereco}}</li>
+                    <li>{{umAgendamento.cliente.telefone}}</li>
+                    <li>{{umAgendamento.cliente.email}}</li>
+                    <li>{{umAgendamento.cliente.dataNascimento}}</li>
+                </ul></td>
             </tr>
         </tbody>
     </table>

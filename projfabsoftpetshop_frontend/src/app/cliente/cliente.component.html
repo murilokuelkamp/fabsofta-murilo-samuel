@@ -18,7 +18,12 @@
                 <td>{{umCliente.telefone}}</td>
                 <td>{{umCliente.email}}</td>
                 <td>{{umCliente.dataNascimento}}</td>
-                <td>{{umCliente.pets}}</td>
+                <td><ul *ngFor="let umPet of umCliente.pets">
+                    <li>{{umPet.nome}}</li>
+                    <li>{{umPet.especie}}</li>
+                    <li>{{umPet.raca}}</li>
+                    <li>{{umPet.idade}}</li>
+                </ul></td>
             </tr>
         </tbody>
     </table>

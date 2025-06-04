@@ -5,6 +5,7 @@ export class Pedido {
     id: number;
     total: number;
     status: string;
-    cliente: Cliente [];
+    cliente: Cliente;
     produtos: Produto [];
+    pagamentos: string;
 }
