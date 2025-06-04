@@ -12,4 +12,7 @@ export class PetService {
   getPets() {
     return this.http.get<Pet[]>(this.apiURL);
   }
+  savePet(pet:Pet){
+    return this.http.post(this.apiURL,pet);
+  }
 }

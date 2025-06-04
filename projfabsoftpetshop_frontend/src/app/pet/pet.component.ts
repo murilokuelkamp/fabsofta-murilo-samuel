@@ -3,10 +3,11 @@ import { Pet } from '../model/pet';
 import { PetService } from '../service/pet.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pet',
-  imports: [HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule, RouterLink],
   templateUrl: './pet.component.html',
   styleUrl: './pet.component.css',
   providers: [PetService]
