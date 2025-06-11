@@ -12,7 +12,6 @@ public class Pagamento {
     private long id;
 
     private String metodo;
-    private String status;
 
 
     // Getters e Setters
@@ -30,13 +29,5 @@ public class Pagamento {
 
     public void setMetodo(String metodo) {
         this.metodo = metodo;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

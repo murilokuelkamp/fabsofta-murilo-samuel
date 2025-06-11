@@ -35,7 +35,10 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamento": "Pix"
+    "pagamento": {
+                "id": 1,
+                "id": 2
+            }
     
 }
 
@@ -44,8 +47,8 @@ PUT http://localhost:8080/api/v1/pedidos/1
 Content-Type: application/json
 
 {
-   "total": "129.0",
-    "status": "Concluido",
+    "total": "129.0",
+    "status": "Em Processo",
     "cliente": {
         "id": 1,
         "nome": "zezinho de oliveira junior",
@@ -72,7 +75,10 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamento": "Pix"
+    "pagamento": {
+                "id": 1,
+                "id": 2
+            }
     
 }
 
