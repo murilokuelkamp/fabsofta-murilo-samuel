@@ -9,7 +9,10 @@ export class ProdutoService {
     apiURL = "http://localhost:8080/api/v1/produtos";
   constructor(private http:HttpClient) { }
 
-  getPets() {
+  getProdutos() {
     return this.http.get<Produto[]>(this.apiURL);
+  }
+  saveProduto(produto: Produto) {
+    return this.http.post<Produto>(this.apiURL, produto);
   }
 }

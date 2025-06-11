@@ -12,4 +12,7 @@ export class ServicoService {
   getServicos() {
     return this.http.get<Servico[]>(this.apiURL);
   }
+  saveServico(servico: Servico) {
+    return this.http.post(this.apiURL, servico);
+  }
 }

@@ -1,5 +1,6 @@
 <main class="container">
     <h2>Clientes</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     <table class="table">
         <thead>
             <tr>
@@ -17,7 +18,7 @@
                 <td>{{umCliente.endereco}}</td>
                 <td>{{umCliente.telefone}}</td>
                 <td>{{umCliente.email}}</td>
-                <td>{{umCliente.dataNascimento}}</td>
+                <td>{{umCliente.dataNascimento | date:'dd/MM/yyyy'}}</td>
                 <td><ul *ngFor="let umPet of umCliente.pets">
                     <li>{{umPet.nome}}</li>
                     <li>{{umPet.especie}}</li>
