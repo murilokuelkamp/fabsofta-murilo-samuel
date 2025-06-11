@@ -8,6 +8,7 @@
                 <th>Espécie</th>
                 <th>Raça</th>
                 <th>Idade</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,8 @@
                 <td>{{umPet.especie}}</td>
                 <td>{{umPet.raca}}</td>
                 <td>{{umPet.idade}}</td>
+                <td><a (click)="alterar(umPet)"
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
 

@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import br.univille.projfabsoftpetshop.entity.Pet;
 import br.univille.projfabsoftpetshop.service.PetService;
 
+
+
 @RestController
 @RequestMapping("/api/v1/pets")
 public class PetController {
@@ -28,6 +30,13 @@ public class PetController {
 
         return new ResponseEntity<List<Pet>>(listaPet, HttpStatus.OK);
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<Pet> getPetId(@PathVariable Long id) {
+        var pet = service.getById(id);
+        
+        return new ResponseEntity<Pet>(pet, HttpStatus.OK);
+    }
+    
     @PostMapping
     public ResponseEntity<Pet> postPet(@RequestBody Pet pet){
         if(pet == null){

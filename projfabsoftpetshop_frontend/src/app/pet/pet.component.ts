@@ -29,4 +29,7 @@ export class PetComponent {
   novo(){
     this.router.navigate(['pets/novo']);
   }
+  alterar(pet:Pet){
+    this.router.navigate(['pets/alterar', pet.id]);
+  }
 }

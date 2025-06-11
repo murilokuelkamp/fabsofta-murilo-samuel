@@ -4,7 +4,7 @@ import { PetService } from '../service/pet.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-pet',
@@ -14,17 +14,26 @@ import { Router } from '@angular/router';
   providers: [PetService, Router]
 })
 export class FormPetComponent {
-  pet:Pet = new Pet();
+    pet:Pet = new Pet();
 
-  constructor(
-    private petService:PetService,
-    private router:Router
-  ){}
+    constructor(
+      private petService:PetService,
+      private router:Router,
+      private activeRouter: ActivatedRoute
+    ){
+      const id = this.activeRouter.snapshot.paramMap.get('id');
 
-  salvar(){
-    this.petService.savePet(this.pet)
-    .subscribe(pets => {
-      this.router.navigate(['pets']);
-    });
+      if (id){
+        this.petService.getPetById(id).subscribe(pet =>{
+          this.pet = pet;
+        })
+      }
+    }
+
+    salvar(){
+      this.petService.savePet(this.pet)
+      .subscribe(pets => {
+        this.router.navigate(['pets']);
+      });
+    }
   }
-}

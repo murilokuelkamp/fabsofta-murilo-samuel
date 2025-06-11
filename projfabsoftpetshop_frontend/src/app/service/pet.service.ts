@@ -13,6 +13,12 @@ export class PetService {
     return this.http.get<Pet[]>(this.apiURL);
   }
   savePet(pet:Pet){
+    if(pet.id){
+      return this.http.put(this.apiURL + '/' + pet.id, pet);
+    }
     return this.http.post(this.apiURL,pet);
+  }
+  getPetById(id: any){
+    return this.http.get<Pet>(this.apiURL + '/' + id);
   }
 }
