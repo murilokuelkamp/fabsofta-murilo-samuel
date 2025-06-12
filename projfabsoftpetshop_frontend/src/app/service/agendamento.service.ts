@@ -14,5 +14,8 @@ export class AgendamentoService {
   getAgendamentos(){
     return this.http.get<Agendamento[]>(this.apiURL);
   }
+  saveAgendamento(agendamento: Agendamento){
+    return this.http.post<Agendamento>(this.apiURL, agendamento);
+  }
 
 }

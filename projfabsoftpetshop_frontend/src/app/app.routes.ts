@@ -8,7 +8,9 @@ import { FormServicoComponent } from './form-servico/form-servico.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { FormClienteComponent } from './form-cliente/form-cliente.component';
 import { PedidoComponent } from './pedido/pedido.component';
+import { FormPedidoComponent } from './form-pedido/form-pedido.component';
 import { AgendamentoComponent } from './agendamento/agendamento.component';
+import { FormAgendamentoComponent } from './form-agendamento/form-agendamento.component';
 
 
 export const routes: Routes = [
@@ -22,5 +24,7 @@ export const routes: Routes = [
     {path: 'clientes', component: ClienteComponent},
     {path: 'clientes/novo', component: FormClienteComponent},
     {path: 'pedidos', component: PedidoComponent},
+    {path: 'pedidos/novo', component: FormPedidoComponent},
     {path: 'agendamentos', component: AgendamentoComponent},
+    {path: 'agendamentos/novo', component: FormAgendamentoComponent}
 ];

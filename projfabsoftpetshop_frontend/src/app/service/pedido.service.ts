@@ -14,5 +14,8 @@ export class PedidoService {
   getPedidos(){
     return this.http.get<Pedido[]>(this.apiURL);
   }
-
+  savePedido(pedido: Pedido){
+    return this.http.post<Pedido>(this.apiURL, pedido);
+  }
+  
 }

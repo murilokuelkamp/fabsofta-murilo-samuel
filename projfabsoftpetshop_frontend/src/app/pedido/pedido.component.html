@@ -1,5 +1,6 @@
 <main class="container">
     <h2>Pedidos</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     <table class="table">
         <thead>
             <tr>
@@ -7,7 +8,7 @@
                 <th>Status</th>
                 <th>Cliente</th>
                 <th>Produtos</th>
-                <th>Pagamentos</th>
+                <th>Pagamento</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +28,7 @@
                     <li>{{umProduto.quantidade}}</li>
                     <li>{{umProduto.preco}}</li>
                 </ul></td>
-                <td>{{umPedido.pagamentos}}</td>
+                <td>{{umPedido.pagamento}}</td>
             </tr>
         </tbody>
     </table>

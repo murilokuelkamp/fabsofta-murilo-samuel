@@ -1,0 +1,31 @@
+<main class="container">
+    <h2>Pedidos</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtTotal">Total</label>
+                <input type="text" [(ngModel)]="pedido.total" class="form-control" id="txtTotal">
+            </div>
+            <div class="form-group">
+                <label for="txtStatus">Status</label>
+                <input type="text" [(ngModel)]="pedido.status" class="form-control" id="txtStatus">
+            </div>
+            <div class="form-group">
+                <label for="txtCliente">Cliente</label>
+                <input type="text" [(ngModel)]="pedido.cliente" class="form-control" id="txtCliente">
+            </div>
+            <div class="form-group">
+                <label for="txtProdutos">Produtos</label>
+                <input type="text" [(ngModel)]="pedido.produtos" class="form-control" id="txtProdutos">
+            </div>
+            <div class="form-group">
+                <label for="txtPagamento">Pagamento</label>
+                <input type="text" [(ngModel)]="pedido.pagamento" class="form-control" id="txtPagamento">
+            </div>
+
+        </div>
+        <button (click)="salvar()" 
+            class="btn btn-primary">Salvar</button>
+
+    </div>
+</main>

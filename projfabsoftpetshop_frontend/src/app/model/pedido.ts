@@ -7,5 +7,5 @@ export class Pedido {
     status: string;
     cliente: Cliente;
     produtos: Produto [];
-    pagamentos: string;
+    pagamento: string;
 }
