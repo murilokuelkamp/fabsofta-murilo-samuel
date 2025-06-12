@@ -27,4 +27,7 @@ export class ServicoComponent {
     novo() {
       this.router.navigate(['servicos/novo']);
     }
+    alterar(servico:Servico){
+      this.router.navigate(['servicos/alterar', servico.id]);
+  }
 }

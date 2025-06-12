@@ -13,6 +13,12 @@ export class ServicoService {
     return this.http.get<Servico[]>(this.apiURL);
   }
   saveServico(servico: Servico) {
+    if(servico.id){
+      return this.http.put(this.apiURL + '/' + servico.id, servico);
+    }
     return this.http.post(this.apiURL, servico);
+  }
+  getServicoById(id: any) {
+  return this.http.get<Servico>(this.apiURL + '/' + id);
   }
 }

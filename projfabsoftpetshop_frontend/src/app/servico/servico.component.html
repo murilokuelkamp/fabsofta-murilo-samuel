@@ -7,6 +7,7 @@
                 <th>Tipo</th>
                 <th>Descrição</th>
                 <th>Preço</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,8 @@
                 <td>{{umServico.tipo}}</td>
                 <td>{{umServico.descricao}}</td>
                 <td>{{umServico.preco}}</td>
+                <td><a (click)="alterar(umServico)" 
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
 

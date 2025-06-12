@@ -19,12 +19,17 @@ export const routes: Routes = [
     {path: 'pets/alterar/:id', component: FormClienteComponent},
     {path: 'produtos', component: ProdutoComponent},
     {path: 'produtos/novo', component: FormProdutoComponent},
+    {path: 'produtos/alterar/:id', component: FormProdutoComponent},
     {path: 'servicos', component: ServicoComponent},
     {path: 'servicos/novo', component: FormServicoComponent},
+    {path: 'servicos/alterar/:id', component: FormServicoComponent},
     {path: 'clientes', component: ClienteComponent},
     {path: 'clientes/novo', component: FormClienteComponent},
+    {path: 'clientes/alterar/:id', component: FormClienteComponent},
     {path: 'pedidos', component: PedidoComponent},
     {path: 'pedidos/novo', component: FormPedidoComponent},
+    {path: 'pedidos/alterar/:id', component: FormPedidoComponent},
     {path: 'agendamentos', component: AgendamentoComponent},
-    {path: 'agendamentos/novo', component: FormAgendamentoComponent}
+    {path: 'agendamentos/novo', component: FormAgendamentoComponent},
+    {path: 'agendamentos/alterar/:id', component: FormAgendamentoComponent}
 ];

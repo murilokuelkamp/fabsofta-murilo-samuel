@@ -15,7 +15,13 @@ export class PedidoService {
     return this.http.get<Pedido[]>(this.apiURL);
   }
   savePedido(pedido: Pedido){
-    return this.http.post<Pedido>(this.apiURL, pedido);
+    if(pedido.id){
+      return this.http.put(this.apiURL + '/' + pedido.id, pedido);
+    }
+    return this.http.post(this.apiURL, pedido);
+  }
+  getPedidoById(id: any){
+    return this.http.get<Pedido>(this.apiURL + '/' + id);
   }
   
 }

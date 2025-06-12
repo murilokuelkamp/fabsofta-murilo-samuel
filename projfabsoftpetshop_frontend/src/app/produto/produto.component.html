@@ -8,6 +8,7 @@
                 <th>Descrição</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,8 @@
                 <td>{{umProduto.descricao}}</td>
                 <td>{{umProduto.quantidade}}</td>
                 <td>{{umProduto.preco}}</td>
+                <td><a (click)="alterar(umProduto)"
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
     </table>

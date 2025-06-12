@@ -4,7 +4,7 @@ import { AgendamentoService } from '../service/agendamento.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-agendamento',
@@ -18,8 +18,18 @@ export class FormAgendamentoComponent {
 
     constructor(
       private agendamentoService: AgendamentoService,
-      private router: Router
-    ){}
+      private router: Router,
+      private activeRouter: ActivatedRoute
+    ){
+      const id = this.activeRouter.snapshot.paramMap.get('id');
+
+      if (id) {
+        this.agendamentoService.getAgendamentoById(id).subscribe(agendamento => {
+          this.agendamento = agendamento;
+        });
+        
+      }
+    }
 
     salvar(){
       this.agendamentoService.saveAgendamento(this.agendamento)

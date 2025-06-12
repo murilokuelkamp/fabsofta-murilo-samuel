@@ -9,6 +9,7 @@
                 <th>Cliente</th>
                 <th>Produtos</th>
                 <th>Pagamento</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,8 @@
                     <li>{{umProduto.preco}}</li>
                 </ul></td>
                 <td>{{umPedido.pagamento}}</td>
+                <td><a (click)="alterar(umPedido)" 
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
     </table>

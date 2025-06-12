@@ -24,6 +24,9 @@ export class PedidoComponent {
     });
   }
   novo() {
-    this.router.navigate(['/pedidos/novo']);
+    this.router.navigate(['pedidos/novo']);
+  }
+  alterar(pedido: Pedido) {
+    this.router.navigate(['pedidos/alterar', pedido.id]);
   }
 }

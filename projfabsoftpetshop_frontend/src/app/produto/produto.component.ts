@@ -23,6 +23,9 @@ export class ProdutoComponent {
       });
     }
     novo(){
-      this.router.navigate(['/produtos/novo']);
+      this.router.navigate(['produtos/novo']);
+    }
+    alterar(produto: Produto){
+      this.router.navigate(['produtos/alterar', produto.id]);
     }
 }

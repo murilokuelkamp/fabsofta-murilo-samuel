@@ -4,7 +4,7 @@ import { ServicoService } from '../service/servico.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-servico',
@@ -18,8 +18,18 @@ export class FormServicoComponent {
 
     constructor(
       private servicoService:ServicoService,
-      private router:Router
-    ){}
+      private router:Router,
+      private activeRouter: ActivatedRoute 
+    ){
+      const id = this.activeRouter.snapshot.paramMap.get('id');
+
+      if(id){
+        this.servicoService.getServicoById(id).subscribe(servico => {
+          this.servico = servico;
+        });
+        
+      }
+    }
 
     salvar(){
       this.servicoService.saveServico(this.servico)

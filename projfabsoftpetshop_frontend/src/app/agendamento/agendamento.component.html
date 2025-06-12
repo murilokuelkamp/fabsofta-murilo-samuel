@@ -9,6 +9,7 @@
                 <th>Pets</th>
                 <th>Serviços</th>
                 <th>Clientes</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +34,8 @@
                     <li>{{umAgendamento.cliente.email}}</li>
                     <li>{{umAgendamento.cliente.dataNascimento}}</li>
                 </ul></td>
+                <td><a (click)="alterar(umAgendamento)" 
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
     </table>

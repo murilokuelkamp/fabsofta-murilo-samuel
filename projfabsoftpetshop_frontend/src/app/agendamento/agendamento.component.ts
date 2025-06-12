@@ -24,6 +24,9 @@ export class AgendamentoComponent {
     });
   }
   novo(){
-    this.router.navigate(['/agendamentos/novo']);
+    this.router.navigate(['agendamentos/novo']);
+  }
+  alterar(agendamento: Agendamento){
+    this.router.navigate(['agendamentos/alterar', agendamento.id]);
   }
 }

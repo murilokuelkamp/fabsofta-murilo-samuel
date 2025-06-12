@@ -9,7 +9,8 @@
                 <th>Telefone</th>
                 <th>Email</th>
                 <th>Data de Nascimento</th>
-                <th>Pets</th>  
+                <th>Pets</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,8 @@
                     <li>{{umPet.raca}}</li>
                     <li>{{umPet.idade}}</li>
                 </ul></td>
+                <td><a (click)="alterar(umCliente)" 
+                    class="btn btn-secondary">Alterar</a></td>
             </tr>
         </tbody>
     </table>

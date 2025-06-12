@@ -4,7 +4,7 @@ import { PedidoService } from '../service/pedido.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-pedido',
@@ -18,8 +18,18 @@ export class FormPedidoComponent {
 
     constructor(
       private pedidoService:PedidoService,
-      private router:Router
-    ){}
+      private router:Router,
+      private activeRouter: ActivatedRoute
+    ){
+      const id = this.activeRouter.snapshot.paramMap.get('id');
+
+      if(id){
+        this.pedidoService.getPedidoById(id).subscribe(pedido => {
+          this.pedido = pedido;
+        });
+
+      }
+    }
 
     salvar(){
       this.pedidoService.savePedido(this.pedido)
