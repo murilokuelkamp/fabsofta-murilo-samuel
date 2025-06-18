@@ -23,5 +23,7 @@ export class PedidoService {
   getPedidoById(id: any){
     return this.http.get<Pedido>(this.apiURL + '/' + id);
   }
-  
+  excluirPedido(id: any){
+  return this.http.delete<Pedido>(this.apiURL + '/' + id);
+  }    
 }

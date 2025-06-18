@@ -21,4 +21,7 @@ export class PetService {
   getPetById(id: any){
     return this.http.get<Pet>(this.apiURL + '/' + id);
   }
+  excluirPet(id: any){
+  return this.http.delete<Pet>(this.apiURL + '/' + id);
+  }  
 }

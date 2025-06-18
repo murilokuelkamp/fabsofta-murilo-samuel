@@ -23,5 +23,7 @@ export class AgendamentoService {
   getAgendamentoById(id: any){
     return this.http.get<Agendamento>(this.apiURL + '/' + id);
   }
-
+  excluirAgendamento(id: any){
+  return this.http.delete<Agendamento>(this.apiURL + '/' + id);
+  }  
 }
