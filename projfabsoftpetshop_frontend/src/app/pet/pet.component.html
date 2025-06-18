@@ -1,6 +1,48 @@
 <main class="container">
     <h2>Pets</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
     <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>Raça</th>
+                <th>Idade</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umPet of listaPets">
+                <td>{{umPet.nome}}</td>
+                <td>{{umPet.especie}}</td>
+                <td>{{umPet.raca}}</td>
+                <td>{{umPet.idade}}</td>
+                <td><a (click)="alterar(umPet)"
+                    class="btn btn-secondary">Alterar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umPet)" 
+                    class="btn btn-danger">Excluir</a>                 
+                </td>
+            </tr>
+        </tbody>
 
     </table>
 </main>
+
+
+<div class="modal fade" #myModal tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir pet</h5>
+            </div>
+            <div class="modal-body">
+            Confirma a exclusão do pet?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="fecharConfirmacao()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="confirmarExclusao()">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,13 @@ public class PedidoController {
         return new ResponseEntity<List<Pedido>>(listaPedido, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Pedido> getPedidoId(@PathVariable Long id) {
+        var pedido = service.getById(id);
+
+        return new ResponseEntity<Pedido>(pedido, HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Pedido> postPedido(@RequestBody Pedido pedido) {
         if (pedido == null) {

@@ -1,0 +1,64 @@
+<main class="container">
+    <h2>Agendamentos</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data e Hora</th>
+                <th>Status</th>
+                <th>Pets</th>
+                <th>Serviços</th>
+                <th>Clientes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umAgendamento of listaAgendamentos">
+                <td>{{umAgendamento.dataHora}}</td>
+                <td>{{umAgendamento.status}}</td>
+                <td><ul>
+                    <li>{{umAgendamento.pets.nome}}</li>
+                    <li>{{umAgendamento.pets.especie}}</li>
+                    <li>{{umAgendamento.pets.raca}}</li>
+                    <li>{{umAgendamento.pets.idade}}</li>
+                </ul></td>
+                <td><ul *ngFor="let umServico of umAgendamento.servico">
+                    <li>{{umServico.tipo}}</li>
+                    <li>{{umServico.descricao}}</li>
+                    <li>{{umServico.preco}}</li>
+                </ul></td>
+                <td><ul>
+                    <li>{{umAgendamento.cliente.nome}}</li>
+                    <li>{{umAgendamento.cliente.endereco}}</li>
+                    <li>{{umAgendamento.cliente.telefone}}</li>
+                    <li>{{umAgendamento.cliente.email}}</li>
+                    <li>{{umAgendamento.cliente.dataNascimento}}</li>
+                </ul></td>
+                <td><a (click)="alterar(umAgendamento)" 
+                    class="btn btn-secondary">Alterar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umAgendamento)" 
+                    class="btn btn-danger">Excluir</a>                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+
+<div class="modal fade" #myModal tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir agendamento</h5>
+            </div>
+            <div class="modal-body">
+            Confirma a exclusão do agendamento?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="fecharConfirmacao()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="confirmarExclusao()">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>
