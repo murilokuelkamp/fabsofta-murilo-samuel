@@ -21,4 +21,7 @@ export class ServicoService {
   getServicoById(id: any) {
   return this.http.get<Servico>(this.apiURL + '/' + id);
   }
+  excluirServico(id: any){
+    return this.http.delete<Servico>(this.apiURL + '/' + id);
+  }
 }
