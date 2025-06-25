@@ -36,8 +36,8 @@ Content-Type: application/json
             }
         ],
     "pagamento": {
-                "metodo": "1",
-                "metodo": "2"
+                "metodo": "PIX",
+                "metodo": "Cartão"
             }
     
 }
@@ -76,8 +76,8 @@ Content-Type: application/json
             }
         ],
     "pagamento": {
-                "metodo": "1",
-                "metodo": "2"
+                "metodo": "PIX",
+                "metodo": "Cartão"
             }
     
 }
