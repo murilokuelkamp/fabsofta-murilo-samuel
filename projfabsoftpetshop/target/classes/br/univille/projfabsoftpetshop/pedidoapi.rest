@@ -35,8 +35,10 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamentos": "Pix"
-    
+    "pagamentos": {
+                "metodo": "PIX",
+                "metodo": "Cartão"
+            }
 }
 
 ### API PEDIDO PUT
@@ -72,8 +74,10 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamentos": "Pix"
-    
+    "pagamentos": {
+                "metodo": "PIX",
+                "metodo": "Cartão"
+            }
 }
 
 ### API PEDIDO DELETE
