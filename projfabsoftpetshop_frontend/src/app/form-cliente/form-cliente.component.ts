@@ -5,23 +5,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Pet } from '../model/pet';
+import { PetService } from '../service/pet.service';
 
 @Component({
   selector: 'app-form-cliente',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-cliente.component.html',
   styleUrl: './form-cliente.component.css',
-  providers: [ClienteService, Router]
+  providers: [ClienteService, Router, PetService]
 })
 export class FormClienteComponent {
     cliente: Cliente = new Cliente();
 
+    public listaPets: Pet[] = [];
+
     constructor(
       private clienteService:ClienteService,
+      private petService: PetService,
       private router:Router,
       private activeRouter: ActivatedRoute
     ){
       const id = this.activeRouter.snapshot.paramMap.get('id');
+
+      this.petService.getPets().subscribe(pets => {
+          this.listaPets = pets;
+      });
 
       if(id){
         this.clienteService.getClienteById(id).subscribe(cliente => {
@@ -36,5 +45,8 @@ export class FormClienteComponent {
         .subscribe(clientes => {
             this.router.navigate(['clientes']);
         });
+    }
+    comparaPets(obj1: Pet, obj2: Pet): boolean {
+      return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
 }
