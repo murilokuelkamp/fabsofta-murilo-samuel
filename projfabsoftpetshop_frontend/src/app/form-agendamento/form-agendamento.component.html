@@ -12,15 +12,21 @@
             </div>
             <div class="form-group">
                 <label for="txtPets">Pets</label>
-                <input type="text" [(ngModel)]="agendamento.pets" class="form-control" id="txtPets">
+                <select id="txtPets" [(ngModel)]="agendamento.pets" class="form-select" [compareWith]="compararPets">
+                    <option *ngFor="let umPet of listaPets" [ngValue]="umPet">{{ umPet.nome }}</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="txtServico">Serviço</label>
-                <input type="text" [(ngModel)]="agendamento.servico" class="form-control" id="txtServico">
+                <label for="txtServico">Serviços</label>
+                <select id="txtServico" [(ngModel)]="agendamento.servico" class="form-select" [compareWith]="compararServicos">
+                    <option *ngFor="let umServico of listaServicos" [ngValue]="umServico">{{ umServico.tipo }}</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="txtCliente">Cliente</label>
-                <input type="text" [(ngModel)]="agendamento.cliente" class="form-control" id="txtCliente">
+                <select id="txtCliente" [(ngModel)]="agendamento.cliente" class="form-select" [compareWith]="compararClientes">
+                    <option *ngFor="let umCliente of listaClientes" [ngValue]="umCliente">{{ umCliente.nome }}</option>
+                </select>
             </div>
         </div>
         

@@ -22,21 +22,20 @@ export class FormClienteComponent {
 
     constructor(
       private clienteService:ClienteService,
-      private petService: PetService,
       private router:Router,
+      private petService: PetService,
       private activeRouter: ActivatedRoute
     ){
       const id = this.activeRouter.snapshot.paramMap.get('id');
-
+      
       this.petService.getPets().subscribe(pets => {
-          this.listaPets = pets;
+        this.listaPets = pets;
       });
 
       if(id){
         this.clienteService.getClienteById(id).subscribe(cliente => {
           this.cliente = cliente;
         });
-
       }
     }
 
@@ -46,7 +45,7 @@ export class FormClienteComponent {
             this.router.navigate(['clientes']);
         });
     }
-    comparaPets(obj1: Pet, obj2: Pet): boolean {
+    compararPets(obj1: Pet, obj2: Pet): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
 }

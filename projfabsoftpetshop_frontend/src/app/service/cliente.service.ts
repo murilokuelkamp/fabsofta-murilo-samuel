@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from '../model/cliente';
+import { Pet } from '../model/pet';
 import { HttpClient } from '@angular/common/http';
 
 

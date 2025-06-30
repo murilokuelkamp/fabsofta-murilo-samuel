@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Agendamento } from '../model/agendamento';
+import { Servico } from '../model/servico';
 import { HttpClient } from '@angular/common/http';
+
 
 
 @Injectable({

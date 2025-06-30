@@ -23,7 +23,8 @@ export class ClienteComponent {
 
   constructor(
     private clienteService: ClienteService,
-    private router: Router) {}
+    private router: Router
+  ) {}
 
   ngOnInit() {
     console.log("Carregando clientes...");
