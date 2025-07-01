@@ -44,6 +44,10 @@ export class FormAgendamentoComponent {
         this.listaClientes = clientes;
       });
 
+      this.servicoService.getServicos().subscribe(servico => {
+        this.listaServicos = servico;
+      });
+
       if (id) {
         this.agendamentoService.getAgendamentoById(id).subscribe(agendamento => {
           this.agendamento = agendamento;

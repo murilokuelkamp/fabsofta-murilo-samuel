@@ -16,7 +16,7 @@ import { FormAgendamentoComponent } from './form-agendamento/form-agendamento.co
 export const routes: Routes = [
     {path: 'pets', component: PetComponent},
     {path: 'pets/novo', component: FormPetComponent},
-    {path: 'pets/alterar/:id', component: FormClienteComponent},
+    {path: 'pets/alterar/:id', component: FormPetComponent},
     {path: 'produtos', component: ProdutoComponent},
     {path: 'produtos/novo', component: FormProdutoComponent},
     {path: 'produtos/alterar/:id', component: FormProdutoComponent},
