@@ -65,10 +65,11 @@ export class FormAgendamentoComponent {
     compararPet(obj1: Pet, obj2: Pet): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
-    compararCliente(obj1: Cliente, obj2: Cliente): boolean {
-      return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
-    }
     compararServico(obj1: Servico, obj2: Servico): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
+    compararCliente(obj1: Cliente, obj2: Cliente): boolean {
+      return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
+    }
+
 }
