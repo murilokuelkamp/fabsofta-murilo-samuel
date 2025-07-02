@@ -39,7 +39,6 @@ Content-Type: application/json
                 "metodo": "PIX",
                 "metodo": "Cartão"
             }
-    
 }
 
 ### API PEDIDO PUT
@@ -79,7 +78,6 @@ Content-Type: application/json
                 "metodo": "PIX",
                 "metodo": "Cartão"
             }
-    
 }
 
 ### API PEDIDO DELETE
