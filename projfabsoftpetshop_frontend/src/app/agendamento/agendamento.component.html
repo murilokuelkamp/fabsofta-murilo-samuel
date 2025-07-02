@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let umAgendamento of listaAgendamentos">
-                <td>{{umAgendamento.dataHora}}</td>
+                <td>{{umAgendamento.dataHora | date:'dd/MM/yyyy'}}</td>
                 <td>{{umAgendamento.status}}</td>
                 <td>{{umAgendamento.pet.nome}}</td>
                 <td>{{umAgendamento.servico.tipo}}</td>
