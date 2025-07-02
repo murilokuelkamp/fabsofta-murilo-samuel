@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.service.PedidoService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-@RequestMapping("/api/v1/pedido")
+@RequestMapping("/api/v1/pedidos")
 public class PedidoController {
 
     @Autowired
@@ -28,6 +28,13 @@ public class PedidoController {
         var listaPedido = service.getAll();
 
         return new ResponseEntity<List<Pedido>>(listaPedido, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Pedido> getPedidoId(@PathVariable Long id) {
+        var pedido = service.getById(id);
+
+        return new ResponseEntity<Pedido>(pedido, HttpStatus.OK);
     }
 
     @PostMapping

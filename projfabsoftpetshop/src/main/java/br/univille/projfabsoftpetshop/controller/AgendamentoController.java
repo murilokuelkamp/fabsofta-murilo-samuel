@@ -17,7 +17,7 @@ import br.univille.projfabsoftpetshop.entity.Agendamento;
 import br.univille.projfabsoftpetshop.service.AgendamentoService;
 
 @RestController
-@RequestMapping("/api/v1/agendamento")
+@RequestMapping("/api/v1/agendamentos")
 public class AgendamentoController {
 
     @Autowired
@@ -28,6 +28,13 @@ public class AgendamentoController {
         var listaAgendamento = service.getAll();
 
         return new ResponseEntity<List<Agendamento>>(listaAgendamento, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Agendamento> getAgendamentoId(@PathVariable Long id){
+        var agendamento = service.getById(id);
+
+        return new ResponseEntity<Agendamento>(agendamento, HttpStatus.OK);
     }
 
     @PostMapping

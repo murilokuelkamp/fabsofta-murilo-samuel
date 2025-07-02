@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import br.univille.projfabsoftpetshop.entity.Produto;
 import br.univille.projfabsoftpetshop.service.ProdutoService;
 
+
+
 @RestController
-@RequestMapping("/api/v1/produto")
+@RequestMapping("/api/v1/produtos")
 public class ProdutoController {
 
     @Autowired
@@ -29,6 +31,14 @@ public class ProdutoController {
 
         return new ResponseEntity<List<Produto>>(listaProduto, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Produto> getProdutoId(@PathVariable Long id) {
+        var produto = service.getById(id);
+
+        return new ResponseEntity<Produto>(produto, HttpStatus.OK);
+    }
+    
 
     @PostMapping
     public ResponseEntity<Produto> postProduto(@RequestBody Produto produto) {

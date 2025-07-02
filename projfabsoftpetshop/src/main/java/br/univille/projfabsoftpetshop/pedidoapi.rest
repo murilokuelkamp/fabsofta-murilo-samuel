@@ -1,9 +1,9 @@
 ###  API PEDIDO GET
-GET http://localhost:8080/api/v1/pedido
+GET http://localhost:8080/api/v1/pedidos
 
 
 ### API PEDIDO POST
-POST http://localhost:8080/api/v1/pedido
+POST http://localhost:8080/api/v1/pedidos
 Content-Type: application/json
 
 {
@@ -42,12 +42,12 @@ Content-Type: application/json
 }
 
 ### API PEDIDO PUT
-PUT http://localhost:8080/api/v1/pedido/1
+PUT http://localhost:8080/api/v1/pedidos/1
 Content-Type: application/json
 
 {
-   "total": "129.0",
-    "status": "Concluido",
+    "total": "129.0",
+    "status": "Em Processo",
     "cliente": {
         "id": 1,
         "nome": "zezinho de oliveira junior",
@@ -81,4 +81,4 @@ Content-Type: application/json
 }
 
 ### API PEDIDO DELETE
-DELETE http://localhost:8080/api/v1/pedido/1
+DELETE http://localhost:8080/api/v1/pedidos/1

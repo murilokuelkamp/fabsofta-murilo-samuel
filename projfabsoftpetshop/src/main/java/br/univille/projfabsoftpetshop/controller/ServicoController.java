@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import br.univille.projfabsoftpetshop.entity.Servico;
 import br.univille.projfabsoftpetshop.service.ServicoService;
 
+
+
 @RestController
-@RequestMapping("/api/v1/servico")
+@RequestMapping("/api/v1/servicos")
 public class ServicoController {
 
     @Autowired
@@ -29,6 +31,14 @@ public class ServicoController {
 
         return new ResponseEntity<List<Servico>>(listaServico, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Servico> getServicoId(@PathVariable Long id) {
+        var servico = service.getById(id);
+
+        return new ResponseEntity<Servico>(servico, HttpStatus.OK);
+    }
+    
 
     @PostMapping
     public ResponseEntity<Servico> postServico(@RequestBody Servico servico) {

@@ -1,10 +1,10 @@
 ### API CLIENTE GET
-GET http://localhost:8080/api/v1/agendamento
+GET http://localhost:8080/api/v1/agendamentos
 
 
 
 ### API CLIENTE POST
-POST http://localhost:8080/api/v1/agendamento
+POST http://localhost:8080/api/v1/agendamentos
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
 
 
 ### API CLIENTE PUT
-PUT http://localhost:8080/api/v1/agendamento/1
+PUT http://localhost:8080/api/v1/agendamentos/1
 Content-Type: application/json
 
 {
@@ -87,4 +87,4 @@ Content-Type: application/json
 }
 
 ### API CLIENTE DELETE
-DELETE http://localhost:8080/api/v1/agendamento/1
+DELETE http://localhost:8080/api/v1/agendamentos/1

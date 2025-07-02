@@ -1,0 +1,60 @@
+<main class="container">
+    <h2>Pedidos</h2>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Cliente</th>
+                <th>Produtos</th>
+                <th>Pagamento</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umPedido of listaPedidos">
+                <td>{{umPedido.total}}</td>
+                <td>{{umPedido.status}}</td>
+                <td><ul>
+                    <li>{{umPedido.cliente.nome}}</li>
+                    <li>{{umPedido.cliente.endereco}}</li>
+                    <li>{{umPedido.cliente.telefone}}</li>
+                    <li>{{umPedido.cliente.email}}</li>
+                    <li>{{umPedido.cliente.dataNascimento}}</li>
+                </ul></td>
+                <td><ul *ngFor="let umProduto of umPedido.produtos">
+                    <li>{{umProduto.nome}}</li>
+                    <li>{{umProduto.descricao}}</li>
+                    <li>{{umProduto.quantidade}}</li>
+                    <li>{{umProduto.preco}}</li>
+                </ul></td>
+                <td>{{umPedido.pagamento}}</td>
+                <td><a (click)="alterar(umPedido)" 
+                    class="btn btn-secondary">Alterar</a>
+                    &nbsp;
+                    <a (click)="abrirConfirmacao(umPedido)" 
+                    class="btn btn-danger">Excluir</a>                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+
+<div class="modal fade" #myModal tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir pedido</h5>
+            </div>
+            <div class="modal-body">
+            Confirma a exclusão do pedido?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="fecharConfirmacao()">Cancelar</button>
+            <button type="button" class="btn btn-primary" (click)="confirmarExclusao()">Sim</button>
+            </div>
+        </div>
+    </div>
+</div>

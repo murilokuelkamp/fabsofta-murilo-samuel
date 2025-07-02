@@ -1,0 +1,27 @@
+<main class="container">
+    <h2>Pets</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="fom-group">
+                <label for="txtNome">Nome</label>
+                <input type="text" [(ngModel)]="pet.nome" class="form-control" id="txtNome">
+            </div>
+            <div class="fom-group">
+                <label for="txtEspecie">Espécie</label>
+                <input type="text" [(ngModel)]="pet.especie" class="form-control" id="txtEspecie">
+            </div>
+            <div class="fom-group">
+                <label for="txtRaca">Raça</label>
+                <input type="text" [(ngModel)]="pet.raca" class="form-control" id="txtRaca">
+            </div>
+            <div class="fom-group">
+                <label for="txtIdade">Idade</label>
+                <input type="text" [(ngModel)]="pet.idade" class="form-control" id="txtIdade">
+            </div>
+        </div>
+
+        <button (click)="salvar()"
+            class="btn btn-primary">Salvar</button>
+            
+    </div>
+</main>
