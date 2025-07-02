@@ -63,13 +63,14 @@ public class ClienteController {
         clienteAntigo.setTelefone(cliente.getTelefone());
         clienteAntigo.setEmail(cliente.getEmail());
         clienteAntigo.setDataNascimento(cliente.getDataNascimento());
-        if(cliente.getPets().size() == 0){
+        clienteAntigo.setPet(cliente.getPet());
+        /*if(cliente.getPets().size() == 0){
             clienteAntigo.getPets().clear();
         }else{
             cliente.getPets().stream()
                 .filter(pet -> !clienteAntigo.getPets().contains(pet))
                 .forEach(clienteAntigo.getPets()::add);
-        }
+        }*/
         service.save(clienteAntigo);
         return new ResponseEntity<Cliente>(clienteAntigo, HttpStatus.OK);
     }

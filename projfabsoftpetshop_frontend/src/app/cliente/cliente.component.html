@@ -20,12 +20,13 @@
                 <td>{{umCliente.telefone}}</td>
                 <td>{{umCliente.email}}</td>
                 <td>{{umCliente.dataNascimento | date:'dd/MM/yyyy'}}</td>
-                <td><ul *ngFor="let umPet of umCliente.pets">
+                <td>{{umCliente.pet.nome}}</td>
+                <!--<td><ul *ngFor="let umPet of umCliente.pets">
                     <li>{{umPet.nome}}</li>
                     <li>{{umPet.especie}}</li>
                     <li>{{umPet.raca}}</li>
                     <li>{{umPet.idade}}</li>
-                </ul></td>
+                </ul></td>-->
                 <td><a (click)="alterar(umCliente)" 
                     class="btn btn-secondary">Alterar</a>
                     &nbsp;

@@ -1,8 +1,8 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -10,9 +10,9 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 public class Agendamento {
@@ -20,17 +20,18 @@ public class Agendamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private LocalDateTime dataHora;
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dataHora;
     private String status;
 
-    @ManyToOne
-    private Pet pets;
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    private Pet pet;
 
-    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
-    @JoinColumn(name = "Agendamento_id")
-    private List<Servico> servico = new ArrayList<>();
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    private Servico servico;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private Cliente cliente;
 
     // Getters e Setters
@@ -42,11 +43,11 @@ public class Agendamento {
         this.id = id;
     }
 
-    public LocalDateTime getDataHora() {
+    public Date getDataHora() {
         return dataHora;
     }
 
-    public void setDataHora(LocalDateTime dataHora) {
+    public void setDataHora(Date dataHora) {
         this.dataHora = dataHora;
     }
 
@@ -58,19 +59,19 @@ public class Agendamento {
         this.status = status;
     }
 
-    public Pet getPets() {
-        return pets;
+    public Pet getPet() {
+        return pet;
     }
 
-    public void setPets(Pet pets) {
-        this.pets = pets;
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
-    public List<Servico> getServico() {
+    public Servico getServico() {
         return servico;
     }
 
-    public void setServico(List<Servico> servico) {
+    public void setServico(Servico servico) {
         this.servico = servico;
     }
 

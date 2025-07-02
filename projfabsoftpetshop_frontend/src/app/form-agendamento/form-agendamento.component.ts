@@ -22,7 +22,7 @@ import { ServicoService } from '../service/servico.service';
 export class FormAgendamentoComponent {
     agendamento: Agendamento = new Agendamento();
 
-    public listaPets: Pet[] = [];
+    public listaPet: Pet[] = [];
     public listaClientes: Cliente[] = [];
     public listaServicos: Servico[] = [];    
 
@@ -36,8 +36,8 @@ export class FormAgendamentoComponent {
     ){
       const id = this.activeRouter.snapshot.paramMap.get('id');
 
-      this.petService.getPets().subscribe(pets => {
-        this.listaPets = pets;
+      this.petService.getPets().subscribe(pet => {
+        this.listaPet = pet;
       });
 
       this.clienteService.getClientes().subscribe(clientes => {
@@ -62,13 +62,13 @@ export class FormAgendamentoComponent {
             this.router.navigate(['agendamentos']);
         });
     }
-    compararPets(obj1: Pet, obj2: Pet): boolean {
+    compararPet(obj1: Pet, obj2: Pet): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
-    compararClientes(obj1: Cliente, obj2: Cliente): boolean {
+    compararCliente(obj1: Cliente, obj2: Cliente): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
-    compararServicos(obj1: Servico, obj2: Servico): boolean {
+    compararServico(obj1: Servico, obj2: Servico): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
 }

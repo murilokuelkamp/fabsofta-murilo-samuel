@@ -10,7 +10,7 @@ Content-Type: application/json
 {
     "dataHora": "2026-12-25T10:00:00",   
     "status": "Esperando",
-    "pets": {
+    "pet": {
         "id": 1,
         "nome": "zeus teodoro",
         "especie": "Cachorro",
@@ -32,7 +32,7 @@ Content-Type: application/json
         "telefone": "5555-1234",
         "email": "ze@ze.com.br",
         "dataNascimento": "2005-04-21",
-        "pets": [
+        "pet": [
             {
                 "id": 1,
                 "nome": "zeus teodoro",
@@ -52,7 +52,7 @@ Content-Type: application/json
 {
     "dataHora": "2026-12-25T10:00:00",   
     "status": "Finalizado",
-    "pets":{
+    "pet":{
                 "id": 1,
                 "nome": "zeus teodoro",
                 "especie": "Cachorro",
@@ -74,7 +74,7 @@ Content-Type: application/json
                 "telefone": "5555-1234",
                 "email": "ze@ze.com.br",
                 "dataNascimento": "2025-04-21",
-                "pets": [
+                "pet": [
                         {
                         "id": 1,
                         "nome": "zeus teodoro",

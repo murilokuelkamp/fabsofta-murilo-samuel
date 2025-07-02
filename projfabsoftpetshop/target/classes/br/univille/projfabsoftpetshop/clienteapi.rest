@@ -13,7 +13,7 @@ Content-Type: application/json
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
     "dataNascimento": "2005-04-23",
-    "pets": [
+    "pet": [
             {
     "id": 1,
     "nome": "zeus teodoro",
@@ -35,7 +35,7 @@ Content-Type: application/json
     "telefone": "5555-1234",
     "email": "ze@ze.com.br",
     "dataNascimento": "2005-04-22",
-    "pets": [
+    "pet": [
            {
     "id": 1,
     "nome": "zeus teodoro",

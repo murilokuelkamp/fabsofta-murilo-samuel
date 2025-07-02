@@ -23,8 +23,8 @@
                 <input type="date" [(ngModel)]="cliente.dataNascimento" class="form-control" id="txtDataNascimento">
             </div>
             <div class="form-group">
-                <label for="txtPets">Pets</label>
-                <select id="txtPets" [(ngModel)]="cliente.pets" class="form-select" [compareWith]="compararPets">
+                <label for="txtPets">Pet</label>
+                <select id="txtPets" [(ngModel)]="cliente.pet" class="form-select" [compareWith]="compararPets">
                     <option *ngFor="let umPet of listaPets" [ngValue]="umPet">{{ umPet.nome }}</option>
                 </select>
             </div>

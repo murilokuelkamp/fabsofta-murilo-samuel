@@ -11,20 +11,20 @@
                 <input type="text" [(ngModel)]="agendamento.status" class="form-control" id="txtStatus">
             </div>
             <div class="form-group">
-                <label for="txtPets">Pets</label>
-                <select id="txtPets" [(ngModel)]="agendamento.pets" class="form-select" [compareWith]="compararPets">
-                    <option *ngFor="let umPet of listaPets" [ngValue]="umPet">{{ umPet.nome }}</option>
+                <label for="txtPets">Pet</label>
+                <select id="txtPets" [(ngModel)]="agendamento.pet" class="form-select" [compareWith]="compararPet">
+                    <option *ngFor="let umPet of listaPet" [ngValue]="umPet">{{ umPet.nome }}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="txtServico">Serviços</label>
-                <select id="txtServico" [(ngModel)]="agendamento.servico" class="form-select" [compareWith]="compararServicos">
+                <label for="txtServico">Serviço</label>
+                <select id="txtServico" [(ngModel)]="agendamento.servico" class="form-select" [compareWith]="compararServico">
                     <option *ngFor="let umServico of listaServicos" [ngValue]="umServico">{{ umServico.tipo }}</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="txtCliente">Cliente</label>
-                <select id="txtCliente" [(ngModel)]="agendamento.cliente" class="form-select" [compareWith]="compararClientes">
+                <select id="txtCliente" [(ngModel)]="agendamento.cliente" class="form-select" [compareWith]="compararCliente">
                     <option *ngFor="let umCliente of listaClientes" [ngValue]="umCliente">{{ umCliente.nome }}</option>
                 </select>
             </div>
