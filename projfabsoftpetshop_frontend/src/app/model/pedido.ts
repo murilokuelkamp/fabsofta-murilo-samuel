@@ -7,6 +7,6 @@ export class Pedido {
     total: number;
     status: string;
     cliente: Cliente;
-    produtos: Produto [];
+    produto: Produto;
     pagamento: Pagamento;
 }

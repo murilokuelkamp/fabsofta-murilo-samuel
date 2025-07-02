@@ -16,7 +16,10 @@
             <tr *ngFor="let umPedido of listaPedidos">
                 <td>{{umPedido.total}}</td>
                 <td>{{umPedido.status}}</td>
-                <td><ul>
+                <td>{{umPedido.cliente.nome}}</td>
+                <td>{{umPedido.produto.nome}}</td>
+                <td>{{umPedido.pagamento.metodo}}</td>
+                <!-- <td><ul>
                     <li>{{umPedido.cliente.nome}}</li>
                     <li>{{umPedido.cliente.endereco}}</li>
                     <li>{{umPedido.cliente.telefone}}</li>
@@ -28,8 +31,7 @@
                     <li>{{umProduto.descricao}}</li>
                     <li>{{umProduto.quantidade}}</li>
                     <li>{{umProduto.preco}}</li>
-                </ul></td>
-                <td>{{umPedido.pagamento.metodo}}</td>
+                </ul></td> -->
                 <td><a (click)="alterar(umPedido)" 
                     class="btn btn-secondary">Alterar</a>
                     &nbsp;

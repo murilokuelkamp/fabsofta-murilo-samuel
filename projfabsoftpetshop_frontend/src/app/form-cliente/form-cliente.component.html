@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="txtPets">Pet</label>
-                <select id="txtPets" [(ngModel)]="cliente.pet" class="form-select" [compareWith]="compararPets">
+                <select id="txtPets" [(ngModel)]="cliente.pet" class="form-select" [compareWith]="compararPet">
                     <option *ngFor="let umPet of listaPets" [ngValue]="umPet">{{ umPet.nome }}</option>
                 </select>
             </div>

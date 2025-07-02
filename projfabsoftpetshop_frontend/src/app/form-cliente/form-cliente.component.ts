@@ -28,8 +28,8 @@ export class FormClienteComponent {
     ){
       const id = this.activeRouter.snapshot.paramMap.get('id');
       
-      this.petService.getPets().subscribe(pets => {
-        this.listaPets = pets;
+      this.petService.getPets().subscribe(pet => {
+        this.listaPets = pet;
       });
 
       if(id){
@@ -45,7 +45,7 @@ export class FormClienteComponent {
             this.router.navigate(['clientes']);
         });
     }
-    compararPets(obj1: Pet, obj2: Pet): boolean {
+    compararPet(obj1: Pet, obj2: Pet): boolean {
       return obj1 && obj2 ? obj1.id === obj2.id : obj1 === obj2;
     }
 }

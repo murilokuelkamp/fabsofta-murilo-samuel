@@ -62,9 +62,10 @@ public class PedidoController {
         pedidoAntigo.setTotal(pedido.getTotal());
         pedidoAntigo.setStatus(pedido.getStatus());
         pedidoAntigo.setCliente(pedido.getCliente());
-        pedidoAntigo.getProdutos().clear();
-        pedidoAntigo.getProdutos().addAll(pedido.getProdutos());
+        pedidoAntigo.setProduto(pedido.getProduto());
         pedidoAntigo.setPagamento(pedido.getPagamento());
+        /*pedidoAntigo.getProdutos().clear();
+        pedidoAntigo.getProduto().addAll(pedido.getProduto());*/
 
         service.save(pedidoAntigo);
         return new ResponseEntity<Pedido>(pedidoAntigo, HttpStatus.OK);
