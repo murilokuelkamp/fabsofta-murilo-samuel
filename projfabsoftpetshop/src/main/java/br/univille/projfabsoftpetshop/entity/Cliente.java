@@ -1,8 +1,6 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,8 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
@@ -31,9 +28,20 @@ public class Cliente {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dataNascimento;
 
-    @OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    /*@OneToMany(cascade = {CascadeType.MERGE,CascadeType.REFRESH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "Cliente_id")
-    private List<Pet> pets = new ArrayList<>();
+    private List<Pet> pets = new ArrayList<>();*/
+    
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private Pet pet;
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
 
     // Getters e Setters
     public long getId() {
@@ -84,11 +92,11 @@ public class Cliente {
         this.dataNascimento = dataNascimento;
     }
 
-    public List<Pet> getPets() {
+    /*public List<Pet> getPets() {
         return pets;
     }
 
     public void setPets(List<Pet> pets) {
         this.pets = pets;
-    }
+    }*/
 }

@@ -62,10 +62,11 @@ public class AgendamentoController {
 
         agendamentoAntigo.setDataHora(agendamento.getDataHora());
         agendamentoAntigo.setStatus(agendamento.getStatus());
-        agendamentoAntigo.setPets(agendamento.getPets());
-        agendamentoAntigo.getServico().clear();
-        agendamentoAntigo.getServico().addAll(agendamento.getServico());
+        agendamentoAntigo.setPet(agendamento.getPet());
+        agendamentoAntigo.setServico(agendamento.getServico());
         agendamentoAntigo.setCliente(agendamento.getCliente());
+        /*agendamentoAntigo.getServico().clear();
+        agendamentoAntigo.getServico().addAll(agendamento.getServico());*/
 
         service.save(agendamentoAntigo);
         return new ResponseEntity<Agendamento>(agendamentoAntigo, HttpStatus.OK);

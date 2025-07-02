@@ -1,7 +1,5 @@
 package br.univille.projfabsoftpetshop.entity;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -9,7 +7,6 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 
@@ -22,11 +19,11 @@ public class Pedido {
     private double total;
     private String status;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
     private Cliente cliente;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    private List<Produto> produtos = new ArrayList<>();
+    @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private Produto produto;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Pagamento pagamento;
@@ -72,11 +69,11 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
+    public Produto getProduto() {
+        return produto;
     }
 
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
 }

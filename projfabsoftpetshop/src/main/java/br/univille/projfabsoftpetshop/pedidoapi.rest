@@ -16,7 +16,7 @@ Content-Type: application/json
         "telefone": "5555-1234",
         "email": "ze@ze.com.br",
         "dataNascimento": "2005-04-21",
-        "pets": [
+        "pet": [
             {
                 "id": 1,
                 "nome": "zeus teodoro",
@@ -26,7 +26,7 @@ Content-Type: application/json
             }
         ]
     },
-    "produtos": [
+    "produto": [
             {
                 "id": 1,
                 "nome": "Extermina Pulga!",
@@ -35,7 +35,7 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamentos": {
+    "pagamento": {
                 "metodo": "PIX",
                 "metodo": "Cartão"
             }
@@ -55,7 +55,7 @@ Content-Type: application/json
         "telefone": "5555-1234",
         "email": "ze@ze.com.br",
         "dataNascimento": "2005-04-21",
-        "pets": [
+        "pet": [
             {
                 "id": 1,
                 "nome": "zeus teodoro",
@@ -65,7 +65,7 @@ Content-Type: application/json
             }
         ]
     },
-    "produtos": [
+    "produto": [
             {
                 "id": 1,
                 "nome": "Extermina Pulga!",
@@ -74,7 +74,7 @@ Content-Type: application/json
                 "preco": 129.0
             }
         ],
-    "pagamentos": {
+    "pagamento": {
                 "metodo": "PIX",
                 "metodo": "Cartão"
             }

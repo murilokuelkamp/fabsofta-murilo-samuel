@@ -14,18 +14,21 @@
         </thead>
         <tbody>
             <tr *ngFor="let umAgendamento of listaAgendamentos">
-                <td>{{umAgendamento.dataHora}}</td>
+                <td>{{umAgendamento.dataHora | date:'dd/MM/yyyy'}}</td>
                 <td>{{umAgendamento.status}}</td>
-                <td><ul>
-                    <li>{{umAgendamento.pets.nome}}</li>
-                    <li>{{umAgendamento.pets.especie}}</li>
-                    <li>{{umAgendamento.pets.raca}}</li>
-                    <li>{{umAgendamento.pets.idade}}</li>
+                <td>{{umAgendamento.pet.nome}}</td>
+                <td>{{umAgendamento.servico.tipo}}</td>
+                <td>{{umAgendamento.cliente.nome}}</td>
+                <td>
+                    <!--<li>{{umAgendamento.pet.nome}}</li>
+                    <li>{{umAgendamento.pet.especie}}</li>
+                    <li>{{umAgendamento.pet.raca}}</li>
+                    <li>{{umAgendamento.pet.idade}}</li>
                 </ul></td>
-                <td><ul *ngFor="let umServico of umAgendamento.servico">
-                    <li>{{umServico.tipo}}</li>
-                    <li>{{umServico.descricao}}</li>
-                    <li>{{umServico.preco}}</li>
+                <td><ul>
+                    <li>{{umAgendamento.servico.tipo}}</li>
+                    <li>{{umAgendamento.servico.descricao}}</li>
+                    <li>{{umAgendamento.servico.preco}}</li>
                 </ul></td>
                 <td><ul>
                     <li>{{umAgendamento.cliente.nome}}</li>
@@ -33,7 +36,7 @@
                     <li>{{umAgendamento.cliente.telefone}}</li>
                     <li>{{umAgendamento.cliente.email}}</li>
                     <li>{{umAgendamento.cliente.dataNascimento}}</li>
-                </ul></td>
+                </ul></td>-->
                 <td><a (click)="alterar(umAgendamento)" 
                     class="btn btn-secondary">Alterar</a>
                     &nbsp;

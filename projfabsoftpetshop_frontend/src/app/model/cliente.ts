@@ -7,6 +7,6 @@ export class Cliente {
     telefone: string;
     email: string;
     dataNascimento: Date;
-    pets: Pet[];
+    pet: Pet;
 }
 

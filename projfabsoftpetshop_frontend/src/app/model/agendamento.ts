@@ -6,7 +6,7 @@ export class Agendamento {
     id: number;
     dataHora: Date;
     status: string;
-    pets: Pet;
-    servico: Servico[];
+    pet: Pet;
+    servico: Servico;
     cliente: Cliente;
 }
